@@ -2,9 +2,21 @@
 node_modules/
 npm-debug.log
 
+# Ignore build files
+build/
+
 # Ignore design files
 resources/
 design/
 
 # Ignore OS X scraps
 .DS_Store
+
+# Ignore environment variables
+.env
+
+# Ignore purchased typefaces
+*.woff
+*.woff2
+*.eot
+*.ttf
