@@ -1,3 +1,3 @@
 ---
-template: guide.html
+layout: guide.html
 ---
