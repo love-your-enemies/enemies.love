@@ -47,12 +47,13 @@ deploy:
 	@echo "Deploying branch \033[0;33m$(BRANCH)\033[0m to Github pages..."
 	@make clean
 	@NODE_ENV=production make build
+	@echo "enemies.love" > build/CNAME
 	@(cd build && \
 		git init -q . && \
 		git add . && \
 		git commit -q -m "Deployment (auto-commit)" && \
 		echo "\033[0;90m" && \
-		git push "git@github.com:$(REPO).git" HEAD:gh-pages --force && \
+		git push "git@github.com:$(REPO).git" HEAD:master --force && \
 		echo "\033[0m")
 	@echo "Deployed to \033[0;32mhttp://enemies.love\033[0m"
 
