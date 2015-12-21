@@ -54,7 +54,7 @@ deploy:
 		echo "\033[0;90m" && \
 		git push "git@github.com:$(REPO).git" HEAD:gh-pages --force && \
 		echo "\033[0m")
-	@echo "Deployed to \033[0;32mhttp://poly.sh/process/\033[0m"
+	@echo "Deployed to \033[0;32mhttp://enemies.love\033[0m"
 
 #
 # Shorthands
