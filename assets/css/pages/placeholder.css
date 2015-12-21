@@ -1,0 +1,181 @@
+
+html,
+body {
+	height: 100%;
+}
+
+h1,
+h2 {
+	margin: 0;
+	font-weight: normal;
+}
+
+input,
+button {
+	appearance: none;
+	border: none;
+	outline: none;
+}
+
+input {
+	width: 100%;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+.hide-desktop {
+	display: none;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 3rem 0 5rem;
+	min-height: 100%;
+}
+
+.meta {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 4rem;
+	width: 90%;
+	max-width: 360px;
+	font-size: 18px;
+}
+
+.meta-event-logo,
+.meta-event-date,
+.meta-event-venue {
+	width: 40rem;
+	text-align: center;
+}
+
+.meta-event-date {
+	text-align: right;
+}
+
+.meta-event-venue {
+	text-align: left;
+}
+
+.intro {
+	margin-bottom: 4rem;
+}
+
+.intro-headline {
+	margin: 0 0 3rem;
+	color: #fff;
+	font-family: var(--lydian-condensed);
+	font-size: 112px;
+	line-height: 0.95;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	text-rendering: optimizeLegibility;
+}
+
+.intro-tagline {
+	margin: 0 auto;
+	max-width: 480px;
+	width: 90%;
+	font-size: 26px;
+	font-weight: normal;
+	line-height: 1.4;
+}
+
+.signup {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 420px;
+}
+
+.signup-details {
+	margin-bottom: 1.5rem;
+	font-size: 18px;
+}
+
+.signup-form {
+	display: flex;
+	color: var(--black);
+}
+
+.signup-form.error {
+	animation: shake 500ms cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.signup-form.loading,
+.signup-form.submitted {
+	opacity: 0.7;
+}
+
+.signup-form.loading .signup-submit,
+.signup-form.submitted .signup-submit {
+	pointer-events: none;
+}
+
+.signup-email,
+.signup-submit {
+	background: transparent;
+	border: 3px var(--black) solid;
+	padding: 0.75em 0.7em 0.55em;
+	font-size: 20px;
+	transition:
+		opacity 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000),
+		transform 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+.signup-email {
+	border-radius: 0;
+	margin-right: 0.5rem;
+}
+
+.signup-email::placeholder {
+	color: var(--black);
+	opacity: 0.5;
+	vertical-align: middle;
+}
+
+.signup-submit {
+	appearance: none;
+	outline: none;
+	padding-left: 1em;
+	padding-right: 1em;
+	user-select: none;
+}
+
+.signup-submit:hover {
+	background: var(--black);
+	color: var(--green);
+}
+
+
+@media only screen and (max-width: 519px) {
+	.hide-desktop {
+		display: inline;
+	}
+	main {
+		padding: 2rem 0;
+	}
+	.meta {
+		font-size: 14px;
+	}
+	.intro-headline {
+		width: 85%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 68px;
+	}
+	.intro-tagline {
+		font-size: 18px;
+	}
+	.signup-form {
+		flex-direction: column;
+	}
+	.signup-email {
+		margin-right: 0;
+		margin-bottom: 0.5rem;
+	}
+}

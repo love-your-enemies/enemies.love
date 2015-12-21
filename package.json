@@ -1,0 +1,41 @@
+{
+  "name": "love-your-enemies",
+  "version": "1.0.0",
+  "description": "A site for Love Your Enemies, a theology colloquium at Tyndale Seminary.",
+  "private": true,
+  "repository": "git://github.com/rosszurowski/enemies.love.git",
+  "author": {
+    "name": "Ross Zurowski",
+    "email": "ross@rosszurowski.com",
+    "url": "http://rosszurowski.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {
+    "@rosszurowski/normalize": "^0.1.1",
+    "@rosszurowski/vanilla": "^0.1.2",
+    "babel-preset-es2015-loose": "^6.1.3",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "chalk": "^1.1.1",
+    "clean-css": "^3.4.8",
+    "cssnext": "^1.8.4",
+    "envify": "^3.4.0",
+    "koa": "^1.1.2",
+    "koa-compress": "^1.0.8",
+    "koa-error": "^1.1.3",
+    "koa-static": "^1.5.2",
+    "metalsmith": "^2.1.0",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-layouts": "^1.4.2",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.4.0",
+    "onchange": "^2.0.0",
+    "swig": "^1.4.2",
+    "uglify-js": "^2.6.1",
+    "wtch": "^4.0.1"
+  }
+}

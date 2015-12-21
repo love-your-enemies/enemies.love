@@ -1,0 +1,16 @@
+
+:root {
+
+	/**
+	 * Typography
+	 */
+	--lydian: 'Lydian', Georgia, serif;
+	--lydian-condensed: 'Lydian Condensed', 'Lydian', Georgia, serif;
+
+	/**
+	 * Colors
+	 */
+	--green: #28b171; /* #39a55d */
+	--black: #10412f;
+
+}

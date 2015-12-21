@@ -1,0 +1,26 @@
+#!/usr/bin/env node --harmony
+
+var koa = require('koa')
+var chalk = require('chalk')
+var serve = require('koa-static')
+var error = require('koa-error')
+
+var port = process.env.PORT || 8080
+var env = process.env.NODE_ENV || 'development'
+var log = console.log.bind(console)
+
+var server = koa()
+
+server.use(error())
+server.use(serve('build'))
+server.listen(port)
+
+log(chalk.green('ysdn-gradshow is running...'))
+log(`Listening on https://localhost:${port}`)
+log(chalk.gray('Ctrl+C to shut down'))
+
+process.on('SIGINT', () => {
+	log(chalk.red('Server has shutdown'))
+	log(`Server was running for ${Math.round(process.uptime())} seconds`)
+	process.exit(0)
+})

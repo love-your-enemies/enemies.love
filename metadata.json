@@ -1,0 +1,23 @@
+{
+	"site": {
+		"title": "Love Your Enemies",
+		"description": "A practical theology conference in Toronto, Canada, run by students at Tyndale Seminary.",
+		"url": "https://enemies.love/"
+	},
+	"event": {
+		"title": "Love Your Enemies",
+		"date": "2016-02-17T15:00:00.000Z",
+		"venue": {
+			"name": "Tyndale Seminary",
+			"url": "http://www.tyndale.ca/"
+		},
+		"facebook": {
+			"id": "762030337263022",
+			"url": "https://www.facebook.com/events/762030337263022/"
+		}
+	},
+	"contact": {
+		"name": "Ben Bartosik",
+		"email": "ben.bartosik@gmail.com"
+	}
+}

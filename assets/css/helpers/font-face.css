@@ -1,0 +1,36 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3143766, 2015-12-19T17:30:39-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Lydian-Roman by Bitstream
+ * URL: http://www.myfonts.com/fonts/bitstream/lydian/lydian/
+ * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+ * Licensed pageviews: 10,000
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3143766
+ *
+ * © 2015 MyFonts Inc
+*/
+
+@font-face {
+  font-family: 'Lydian';
+	font-weight: normal;
+	font-style: normal;
+  src: url('/assets/fonts/Lydian-Regular.woff2') format('woff2'),
+			 url('/assets/fonts/Lydian-Regular.woff') format('woff'),
+       url('/assets/fonts/Lydian-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lydian Condensed';
+  font-weight: bold;
+  font-style: normal;
+  src: url('/assets/fonts/LydianCondensed-Bold.woff') format('woff');
+}
