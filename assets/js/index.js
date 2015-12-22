@@ -1,19 +1,22 @@
 
-import $ from 'jquery'
+import ready from 'domready'
+import select from 'dom-select'
+import on from 'dom-event'
+import classes from 'dom-classes'
 
 const valid = /^.+@.+\..+$/gi
 
-$(() => {
+ready(() => {
 
-	const $form = $('.signup-form')
-	const $email = $('.signup-email')
-	const $button = $('.signup-submit')
-	const $honeypot = $('.signup-gotcha')
-	const $details = $('.signup-details p')
+	const $form = select('.signup-form')
+	const $email = select('.signup-email')
+	const $button = select('.signup-submit')
+	const $honeypot = select('.signup-gotcha')
+	const $details = select('.signup-details p')
 
 	let hasError = false
 
-	$form.on('submit', submit)
+	on($form, 'submit', submit)
 
 	/**
 	 * Event Handlers
@@ -22,54 +25,73 @@ $(() => {
 		e.preventDefault()
 		if (hasError) return
 		const date = new Date()
-		const email = $email.val()
+		const email = $email.value
 		// VALIDATE: did they get caught in the honeypot?
-		if ($honeypot.val().length > 0) {
-			// Fail silently
-			$details.text('Sorry, something went wrong.')
+		if ($honeypot.value.length > 0) {
+			$details.textContent = 'Sorry, something went wrong.'
 			return
 		}
 		// VALIDATE: is the email a real email?
 		if (!valid.test(email)) {
 			hasError = true
 			if (email.length < 1) {
-				$details.text('Enter an email address')
+				$details.textContent = 'Enter an email address'
 			} else {
-				$details.text('This email address is not valid')
+				$details.textContent = 'This email address is not valid'
 			}
-			$form.addClass('error')
+			classes.add($form, 'error')
 			setTimeout(() => {
-				$form.removeClass('error')
+				classes.remove($form, 'error')
 				hasError = false
 			}, 800)
 			return
 		}
-		$email.attr('readonly', '')
-		$button.attr('disabled', '')
-		$details.text('Saving...')
-		$form.addClass('loading')
+		$email.setAttribute('readonly', '')
+		$button.setAttribute('disabled', '')
+		$details.textContent = 'Saving...'
+		classes.add($form, 'loading')
 		subscribe({ date,  email })
-			.always(() => { $form.removeClass('loading') })
-			.done(() => {
-				$form.addClass('submitted')
-				$details.text('Thanks! We’ll let you know when you’re able to register.')
+			.then(checkStatus)
+			.then(parseJSON)
+			.then(res => {
+				classes.add($form, 'submitted')
+				$details.textContent = 'Thanks! We’ll let you know when you’re able to register.'
 			})
-			.fail(() => {
-				$details.text('Sorry, something went wrong. Try again later.')
+			.catch(err => {
+				setTimeout(() => {
+					$details.textContent = 'Sorry, something went wrong. Try again later.'
+				}, 150)
 			})
+	}
+
+	function parseJSON (res) {
+		return res.json()
+	}
+
+	function checkStatus (res) {
+		if (res.status >= 200 && res.status < 300) {
+			return res
+		} else {
+			var error = new Error(res.statusText)
+			error.res = res
+			throw error
+		}
 	}
 
 	/**
 	 * Helper Functions
 	 */
 	function subscribe (params) {
-		return $.ajax({
-			method: 'POST',
-			url: 'https://sheetsu.com/apis/v1.0/8186a1cb',
-			data: {
+		return fetch('https://sheetsu.com/apis/v1.0/8186a1cb', {
+			method: 'post',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
 				'Date': toDateString(params.date),
 				'Email': params.email
-			}
+			})
 		})
 	}
 
@@ -91,6 +113,4 @@ $(() => {
 
 		return `${mm}/${dd}/${yyyy} ${hh}:${nn}${a}`
 	}
-
-	global.$ = $
 })
