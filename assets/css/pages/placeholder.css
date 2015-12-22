@@ -67,7 +67,8 @@ main {
 }
 
 .intro-headline {
-	margin: 0 0 3rem;
+	margin: 0 auto 3rem;
+	width: 90%;
 	color: #fff;
 	font-family: var(--lydian-condensed);
 	font-size: 112px;
