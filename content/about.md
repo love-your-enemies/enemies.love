@@ -1,4 +1,4 @@
 ---
-layout: guide.html
+layout: about.html
 draft: true
 ---
