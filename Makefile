@@ -31,7 +31,7 @@ BRANCH     = $(shell git rev-parse --abbrev-ref HEAD)
 build: install assets content styles scripts
 
 watch: build
-	@onchange "content/**/*.md" "layouts/**/*.html" "bin/build" -- make content & \
+	@onchange "content/**/*.md" "layouts/**/*.html" "bin/build" "metadata.json" -- make content & \
 		onchange "$(ASSETS)" -- make assets & \
 		cssnext --watch assets/css/index.css build/assets/bundle.css & \
 		watchify $(TRANSFORMS) assets/js/index.js -o build/assets/bundle.js & \
@@ -75,7 +75,7 @@ scripts: build/assets/bundle.js
 node_modules: package.json
 	@npm install
 
-build/index.html: bin/build $(CONTENT) $(LAYOUTS)
+build/index.html: bin/build metadata.json $(CONTENT) $(LAYOUTS)
 	@bin/build
 
 build/%: assets/%
