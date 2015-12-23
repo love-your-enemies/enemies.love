@@ -5,6 +5,7 @@ import on from 'dom-event'
 import classes from 'dom-classes'
 
 const valid = /^.+@.+\..+$/gi
+ga = ga || function () {}
 
 ready(() => {
 
@@ -54,10 +55,12 @@ ready(() => {
 			.then(checkStatus)
 			.then(parseJSON)
 			.then(res => {
+				ga('send', 'event', 'Email Notification Form', 'registration')
 				classes.add($form, 'submitted')
 				$details.textContent = 'Thanks! We’ll let you know when you’re able to register.'
 			})
 			.catch(err => {
+				ga('send', 'event', 'Email Notification Form', 'error')
 				setTimeout(() => {
 					$details.textContent = 'Sorry, something went wrong. Try again later.'
 				}, 150)
