@@ -1,4 +1,6 @@
 
+import './lib/polyfills.js'
+
 import ready from 'domready'
 import select from 'dom-select'
 import on from 'dom-event'
