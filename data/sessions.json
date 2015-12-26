@@ -1,0 +1,134 @@
+[
+	{
+		"start": "2016-02-17T14:30:00.000Z",
+		"type": "Miscellaneous",
+		"title": "Introduction",
+		"location": "Chapel"
+	},
+	{
+		"start": "2016-02-17T14:45:00.000Z",
+		"type": "Lecture",
+		"title": "Building a City that Loves its Enemies",
+		"location": "Chapel",
+		"speaker": "jennifer-keesmaat"
+	},
+	{
+		"start": "2016-02-17T15:15:00.000Z",
+		"type": "Q&A",
+		"location": "Chapel",
+		"with": ["jennifer-keesmaat"]
+	},
+	{
+		"start": "2016-02-17T15:30:00.000Z",
+		"type": "Break",
+		"title": "Break & Refreshments"
+	},
+	{
+		"start": "2016-02-17T15:40:00.000Z",
+		"type": "Workshop",
+		"title": "Radical Hospitality",
+		"speaker": "jmckinney",
+		"location": "____"
+	},
+	{
+		"start": "2016-02-17T15:40:00.000Z",
+		"type": "Workshop",
+		"title": "As I Have Loved",
+		"subtitle": "A global perspective on how Christians love their enemies",
+		"speaker": "wwahba",
+		"location": "____"
+	},
+	{
+		"start": "2016-02-17T15:40:00.000Z",
+		"type": "Workshop",
+		"title": "Trauma",
+		"subtitle": "How to love someone who has experienced trauma",
+		"speaker": "mgoertz",
+		"location": "____"
+	},
+	{
+		"start": "2016-02-17T15:40:00.000Z",
+		"type": "Workshop",
+		"title": "Old Testament",
+		"subtitle": "An Old Testament theological perspective on loving your enemies",
+		"speaker": "bleunglai",
+		"location": "____"
+	},
+	{
+		"start": "2016-02-17T16:50:00.000Z",
+		"type": "Break",
+		"title": "Break"
+	},
+	{
+		"start": "2016-02-17T17:00:00.000Z",
+		"type": "Lecture",
+		"title": "What it Takes to be a Presence of Love to Canada’s Newcomers",
+		"location": "Chapel",
+		"speaker": "awoolger"
+	},
+	{
+		"start": "2016-02-17T17:45:00.000Z",
+		"type": "Break",
+		"title": "Lunch"
+	},
+	{
+		"start": "2016-02-17T18:30:00.000Z",
+		"type": "Podcast",
+		"title": "Group Interview with Mark Groleau",
+		"location": "Chapel",
+		"speaker": "mgroleau",
+		"with": [
+			"tleblanc",
+			"dkupp"
+		]
+	},
+	{
+		"start": "2016-02-17T19:50:00.000Z",
+		"type": "Break",
+		"title": "Break"
+	},
+	{
+		"start": "2016-02-17T20:00:00.000Z",
+		"type": "Workshop",
+		"title": "Formation of Seminary Students",
+		"subtitle": "A formation of Seminary Students to “love your enemies”",
+		"speaker": "jclark",
+		"location": "____"
+	},
+	{
+		"start": "2016-02-17T20:00:00.000Z",
+		"type": "Workshop",
+		"title": "Practical Spiritual Theology",
+		"subtitle": "Practical spiritual theology for Christian Leaders to “love their enemies”",
+		"speaker": "smosteller",
+		"location": "____"
+	},
+	{
+		"start": "2016-02-17T20:00:00.000Z",
+		"type": "Workshop",
+		"title": "Restorative Justice",
+		"subtitle": "Restorative justice and loving our sexual predators in our society",
+		"speaker": "bsider",
+		"location": "____"
+	},
+	{
+		"start": "2016-02-17T20:00:00.000Z",
+		"type": "Workshop",
+		"title": "Loving Sex Workers",
+		"subtitle": "Serving and loving female sex workers in Toronto",
+		"speaker": "jyee",
+		"location": "____"
+	},
+	{
+		"start": "2016-02-17T21:15:00.000Z",
+		"type": "Miscellaneous",
+		"title": "Closing Remarks",
+		"location": "Chapel"
+	},
+	{
+		"start": "2016-02-18T00:00:00.000Z",
+		"type": "Miscellaneous",
+		"title": "After Party",
+		"location": "A Local Pub"
+	}
+]

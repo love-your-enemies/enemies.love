@@ -75,7 +75,7 @@ scripts: build/assets/bundle.js
 node_modules: package.json
 	@npm install
 
-build/index.html: bin/build metadata.json $(CONTENT) $(LAYOUTS)
+build/index.html: bin/build metadata.json data/sessions.json data/speakers.json $(CONTENT) $(LAYOUTS)
 	@bin/build
 
 build/%: assets/%

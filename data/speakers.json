@@ -1,0 +1,95 @@
+{
+	"jkeesmaat": {
+		"name": "Jennifer Keesmaat",
+		"biography": "City of Toronto, Chief Planner & Executive Director",
+		"twitter": "jen_keesmaat",
+		"links": [
+			{ "label": "Website", "url": "http://ownyourcity.ca/" }
+		]
+	},
+	"jmckinney": {
+		"name": "Jason McKinney",
+		"biography": "Adjunct Professor at Trinity College",
+		"twitter": "_____",
+		"links": [
+			{ "label": "Jeremiah Community", "url": "http://jeremiahcommunity.ca/" }
+		]
+	},
+	"wwahba": {
+		"name": "Wafik Wahba",
+		"biography": "Associate Professor of Global Christianity at Tyndale Seminary",
+		"links": [
+			{ "label": "Faculty", "url": "https://www.tyndale.ca/faculty/wafik-wahba" }
+		]
+	},
+	"mgoertz": {
+		"name": "Marion Goertz",
+		"biography": "Relationship counsellor",
+		"twitter": "mariongoertz",
+		"links": [
+			{ "label": "Website", "url": "http://mariongoertz.com/" }
+		]
+	},
+	"bleunglai": {
+		"name": "Barbara Leung Lai",
+		"biography": "Professor of Old Testament at Tyndale Seminary",
+		"links": [
+			{ "label": "Faculty", "url": "https://www.tyndale.ca/faculty/barbara-leung-lai" }
+		]
+	},
+	"awoolger": {
+		"name": "Anne Woolger",
+		"biography": "Director of Matthew House, a refugee shelter in Toronto",
+		"links": [
+			{ "label": "Website", "url": "http://www.matthewhouse.ca/" }
+		]
+	},
+	"mgroleau": {
+		"name": "Mark Groleau",
+		"biography": "",
+		"twitter": "markgroleau",
+		"links": [
+			{ "label": "Website", "url": "http://www.wikigodpod.com/" }
+		]
+	},
+	"tleblanc": {
+		"name": "Terry LeBlanc",
+		"biography": "Indigenous Studies Program Director at Tyndale Seminary",
+		"twitter": "markgroleau",
+		"links": [
+			{ "label": "Faculty", "url": "https://www.tyndale.ca/faculty/terry-leblanc" }
+		]
+	},
+	"dkupp": {
+		"name": "David Kupp",
+		"biography": "Professor of Pastoral Theology at Wycliffe College",
+		"links": []
+	},
+	"jclark": {
+		"name": "Janet Clark",
+		"biography": "Senior Academic Vice President at Tyndale Seminary",
+		"links": [
+			{ "label": "Faculty", "url": "https://www.tyndale.ca/faculty/janet-clark" }
+		]
+	},
+	"smosteller": {
+		"name": "Sue Mosteller",
+		"biography": "Toronto Author, Member of the Sisters of St. Joseph, Trustee of the Henri Nouwen Legacy, and former leader in the L'Arche and Daybreak Communities.",
+		"twitter": "suemost123",
+		"links": []
+	},
+	"bsider": {
+		"name": "Brad Sider",
+		"biography": "Yonge Street Mission",
+		"links": [
+			{ "label": "Family Blog", "url": "http://www.siderfamily.blogspot.ca/" }
+		]
+	},
+	"jyee": {
+		"name": "Joanna Yee",
+		"biography": "Director of Rahab Ministry, part of Youth Unlimited",
+		"links": [
+			{ "label": "Website", "url": "http://www.careministries.ca/" }
+		]
+	}
+}

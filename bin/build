@@ -22,6 +22,12 @@ const config = {
 }
 
 /**
+ * Add `data` to `metadata`
+ */
+metadata.speakers = require('../data/speakers')
+metadata.sessions = require('../data/sessions')
+
+/**
  * Prepare metalsmith
  */
 const site = metalsmith(__dirname)
