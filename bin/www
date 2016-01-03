@@ -1,5 +1,7 @@
 #!/usr/bin/env node --harmony
 
+var pkg = require('../package.json')
+
 var koa = require('koa')
 var chalk = require('chalk')
 var serve = require('koa-static')
@@ -12,10 +14,10 @@ var log = console.log.bind(console)
 var server = koa()
 
 server.use(error())
-server.use(serve('build'))
+server.use(serve('./build'))
 server.listen(port)
 
-log(chalk.green('ysdn-gradshow is running...'))
+log(chalk.green(`${pkg.name} is running...`))
 log(`Listening on https://localhost:${port}`)
 log(chalk.gray('Ctrl+C to shut down'))
 
