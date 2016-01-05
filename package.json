@@ -11,12 +11,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "dom-classes": "0.0.1",
-    "dom-event": "0.0.5",
-    "dom-select": "^1.1.0",
     "domready": "^1.0.8",
-    "es6-promise": "^3.0.2",
-    "whatwg-fetch": "^0.10.1"
+    "scrollmonitor": "^1.0.12"
   },
   "devDependencies": {
     "@rosszurowski/normalize": "^0.1.1",
@@ -38,6 +34,8 @@
     "metalsmith-layouts": "^1.4.2",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.4.0",
+    "metalsmith-typography": "^0.1.1",
+    "metalsmith-widow": "^1.1.1",
     "onchange": "^2.0.0",
     "swig": "^1.4.2",
     "uglify-js": "^2.6.1",

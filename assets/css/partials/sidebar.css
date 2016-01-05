@@ -1,0 +1,61 @@
+
+.sidebar {
+	background: var(--green);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem;
+	width: var(--sidebar-width);
+}
+
+.sidebar-date,
+.sidebar-cta,
+.sidebar-register-button {
+	opacity: 1.0;
+	transform: none;
+	transition:
+		opacity 400ms ease 100ms,
+		transform 400ms ease 100ms;
+}
+
+.sidebar.inactive .sidebar-date,
+.sidebar.inactive .sidebar-cta,
+.sidebar.inactive .sidebar-register-button {
+	opacity: 0.0;
+	transform: translateY(0.7rem);
+}
+
+.sidebar-title {
+	margin: auto;
+	color: var(--white);
+	font-family: var(--lydian-condensed);
+	font-size: var(--title-font-size);
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.04em;
+}
+
+.sidebar-date,
+.sidebar-cta {
+	padding: 20px 0;
+}
+
+.sidebar-cta {
+	font-size: 20px;
+}
+
+.sidebar-register-button {
+	border: 2px currentColor solid;
+	border-radius: 4px;
+	display: inline-block;
+	padding: 0.45em 0.75em 0.3em;
+	color: var(--white);
+}
+
+.sidebar-register-button:hover {
+	color: var(--dark-green);
+}

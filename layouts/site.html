@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	<div class="page page-{% block id %}default{% endblock %}">
+		<div class="sidebar inactive">
+			<div class="sidebar-date">{{ event.start | date('F j') }}</div>
+			<h1 class="sidebar-title">
+				{% block headline %}
+					Love Your Enemies
+				{% endblock %}
+			</h1>
+			<div class="sidebar-cta">
+				<a href="/register/" class="sidebar-register-button">Register</a>
+			</div>
+		</div>
+		<main class="main">
+			{% block main %}
+			{% endblock %}
+		</main>
+	</div>
+{% endblock %}

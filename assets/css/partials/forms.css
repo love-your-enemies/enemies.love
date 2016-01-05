@@ -1,0 +1,29 @@
+
+input[type="text"],
+input[type="email"],
+button[type="submit"] {
+	border: none;
+	appearance: none;
+	outline: none;
+}
+
+input[type="text"],
+input[type="email"] {
+	background: #f2f2f2;
+	padding: 0.6em;
+}
+
+button[type="submit"] {
+	background: var(--green);
+	border-radius: 4px;
+	display: block;
+	padding: 0.5em 1em;
+	color: var(--white);
+	font-family: var(--calibre);
+	font-size: 16px;
+}
+
+button[type="submit"][disabled] {
+	background: var(--gray);
+	color: var(--white);
+}

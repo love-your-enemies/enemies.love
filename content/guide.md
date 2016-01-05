@@ -1,4 +1,3 @@
 ---
 layout: guide.html
-draft: true
 ---

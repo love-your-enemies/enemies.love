@@ -1,0 +1,16 @@
+
+@font-face {
+  font-family: 'Calibre';
+	font-weight: normal;
+	font-style: normal;
+  src: url('/assets/fonts/CalibreWeb-Regular.woff') format('woff'),
+       url('/assets/fonts/CalibreWeb-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Calibre';
+	font-weight: bold;
+	font-style: normal;
+  src: url('/assets/fonts/CalibreWeb-Medium.woff') format('woff'),
+       url('/assets/fonts/CalibreWeb-Medium.ttf') format('truetype');
+}

@@ -2,15 +2,37 @@
 :root {
 
 	/**
+	 * Layout
+	 */
+	--sidebar-width: 40%;
+
+	/**
 	 * Typography
 	 */
 	--lydian: 'Lydian', Georgia, serif;
 	--lydian-condensed: 'Lydian Condensed', 'Lydian', Georgia, serif;
+	--calibre: 'Calibre', 'Avenir', sans-serif;
+
+	--base-line-height: 1.4;
+
+	--title-font-size: 72px;
+
+	--base-font-size: 19px;
+	--medium-font-size: 22px;
+	--large-font-size: 30px;
+	--small-font-size: 14px;
 
 	/**
 	 * Colors
 	 */
+	--white: #fff;
+	--off-white: #f2f2f2;
+	--gray: #959595;
+	--lighter-gray: #e2e2e2;
+	--light-gray: #fafafa;
+	--light-green: #4fc08b;
 	--green: #28b171; /* #39a55d */
-	--black: #10412f;
+	--dark-green: #10412f;
+	--black: #4a4a4a;
 
 }

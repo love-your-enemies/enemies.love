@@ -1,0 +1,192 @@
+
+.session {
+	position: relative;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAMAAABh9kWNAAAAA1BMVEX19fWwaZ+KAAAACklEQVR4AWNAAgAADAAB+560hQAAAABJRU5ErkJggg==);
+	background-position: 5px 0;
+	background-repeat: repeat-y;
+	display: flex;
+	max-width: 35em;
+	font-family: var(--calibre);
+}
+
+.session-meta {
+	flex: 0 0 25%;
+	max-width: 150px;
+	font-size: 14px;
+}
+
+.session-time {
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+}
+
+.session-time-circle {
+	background: #fff;
+	border: 3px #9a9a9a solid;
+	border-radius: 50%;
+	position: relative;
+	display: inline-block;
+	margin: 0 1em 0 0;
+	width: 14px;
+	height: 14px;
+}
+
+.session-time-circle::after {
+	border: 4px #fff solid;
+	border-radius: 50%;
+	content: "";
+	position: absolute;
+	top: -7px; left: -7px;
+	width: 22px;
+	height: 22px;
+}
+
+.session-time-ampm {
+	padding-left: 0.1em;
+	color: var(--gray);
+}
+
+.session-location {
+	margin-bottom: 1rem;
+	font-family: var(--calibre);
+}
+
+.session-content {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.session-speaker {
+	margin-bottom: 0.25rem;
+	font-size: 28px;
+	line-height: 1.15;
+}
+
+.session-title {
+	color: var(--gray);
+	font-size: 16px;
+	line-height: 1;
+	margin-bottom: 0.75rem;
+}
+
+.session-description {
+	font-family: var(--calibre);
+}
+
+/**
+ * Speaker Styles
+ */
+
+.session-speaker-about {
+	display: flex;
+	margin-top: 1.25rem;
+}
+
+.session-speaker-image {
+	max-width: 72px;
+	margin-right: 1rem;
+	user-select: none;
+}
+
+.session-speaker-image img {
+	border-radius: 50%;
+	vertical-align: bottom;
+}
+
+.session-speaker-details {
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.session-speaker-details-name {
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.session-speaker-details-title {
+	font-size: 14px;
+}
+
+/**
+ * Event-specific Overrides
+ */
+
+.session--lecture .session-meta {
+	padding-top: 8px;
+}
+
+/*.session--lecture .session-title {
+	font-size: 32px;
+}*/
+
+.session--lecture .session-time-circle {
+	border-color: var(--green);
+}
+
+.session--qa .session-with {
+	color: var(--gray);
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.session--misc .session-title,
+.session--after .session-title {
+	font-size: 22px;
+}
+
+.session--misc .session-time-circle,
+.session--after .session-time-circle,
+.session--break .session-time-circle {
+	border-color: var(--lighter-gray);
+}
+
+.session--break .session-title {
+	color: var(--gray);
+	font-size: 19px;
+}
+
+.session--group .session-meta {
+	padding-top: 10px;
+}
+
+.session--group .session-title {
+	color: var(--green);
+	font-size: 28px;
+}
+
+.session--podcast .session-meta {
+	padding-top: 28px;
+}
+
+.session--subsession .session-speaker {
+	font-size: 20px;
+}
+
+.session--subsession.session--workshop .session-meta {
+	padding-top: 10px;
+}
+
+.session--subsession .session-time-circle {
+	border: none;
+	background: #9a9a9a;
+	width: 7px;
+	height: 7px;
+	left: 3px;
+}
+
+.session--subsession .session-time-circle::after {
+	top: -5px; left: -4px;
+	width: 17px;
+	height: 17px;
+}
+
+.session--after {
+	background-image: none;
+}

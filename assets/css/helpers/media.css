@@ -1,0 +1,4 @@
+
+@custom-media --only-tablets (width <= 768px);
+@custom-media --only-small-screens (width <= 700px);
+@custom-media --only-mobile (width <= 480px);

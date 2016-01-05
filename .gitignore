@@ -20,3 +20,6 @@ design/
 *.woff2
 *.eot
 *.ttf
+
+# Ignore fontcustom scraps
+.fontcustom-manifest.json

@@ -1,0 +1,31 @@
+
+.page-register {
+}
+
+.page-register .sidebar {
+	background: var(--black);
+}
+
+.page-register .main {
+	padding: 4rem;
+}
+
+.form-field {
+	display: flex;
+	align-items: center;
+	margin: 0.5rem 0;
+	font-family: var(--calibre);
+}
+
+.form-field-label {
+	flex: 1 0 auto;
+	max-width: 140px;
+}
+
+.form-field-input {
+	flex: 1 0 auto;
+}
+
+.page-register button[type="submit"] {
+	margin: 4rem auto 0;
+}

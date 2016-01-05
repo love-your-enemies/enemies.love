@@ -18,7 +18,7 @@ STYLES     = $(shell find assets -type f -name '*.css')
 SCRIPTS    = $(shell find assets -type f -name '*.js')
 ASSETS     = assets/img assets/favicon.png assets/fonts
 
-BROWSERS   = "last 2 versions, > 10%"
+BROWSERS   = "last 1 version"
 TRANSFORMS = -t [ babelify --presets [ es2015-loose ] ] -t envify
 
 REPO       = love-your-enemies/enemies.love
@@ -31,7 +31,7 @@ BRANCH     = $(shell git rev-parse --abbrev-ref HEAD)
 build: install assets content styles scripts
 
 watch: build
-	@onchange "content/**/*.md" "layouts/**/*.html" "bin/build" "metadata.json" -- make content & \
+	@onchange "content/**/*.md" "layouts/**/*.html" "data/**/*.json" "bin/build" "metadata.json" -- make content & \
 		onchange "$(ASSETS)" -- make assets & \
 		cssnext --watch assets/css/index.css build/assets/bundle.css & \
 		watchify $(TRANSFORMS) assets/js/index.js -o build/assets/bundle.js & \
@@ -43,7 +43,7 @@ clean:
 clean-deps:
 	@rm -rf node_modules
 
-deploy:
+deploy\:production:
 	@echo "Deploying branch \033[0;33m$(BRANCH)\033[0m to Github pages..."
 	@make clean
 	@NODE_ENV=production make build
@@ -56,6 +56,19 @@ deploy:
 		git push "git@github.com:$(REPO).git" HEAD:master --force && \
 		echo "\033[0m")
 	@echo "Deployed to \033[0;32mhttp://enemies.love\033[0m"
+
+deploy\:staging:
+	@echo "Deploying branch \033[0;33m$(BRANCH)\033[0m to Surge.sh..."
+	@make clean
+	@NODE_ENV=production make build
+	@(cd build && \
+		git init -q . && \
+		git add . && \
+		git commit -q -m "Deployment (auto-commit)" && \
+		echo "\033[0;90m" && \
+		surge . love-your-enemies-staging.surge.sh \
+		echo "\033[0m")
+	@echo "Deployed to \033[0;32mhttp://love-your-enemies-staging.surge.sh/\033[0m"
 
 #
 # Shorthands

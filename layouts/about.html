@@ -1,7 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'site.html' %}
 
-{% block body %}
+{% block main %}
 
-	About
+	<h1>About</h1>
+
+	{{ contents | safe }}
+
+	<p>Site by <a href="http://rosszurowski.com/">Ross Zurowski</a></p>
 
 {% endblock %}
