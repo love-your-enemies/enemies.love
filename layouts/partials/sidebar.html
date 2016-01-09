@@ -1,0 +1,13 @@
+<div class="sidebar inactive">
+	<div class="sidebar-date">{{ event.start | date('F j') }}</div>
+	<h1 class="sidebar-title">
+		{% block headline %}
+			<span class="word">Love</span>
+			<span class="word">Your</span>
+			<span class="word">Enemies</span>
+		{% endblock %}
+	</h1>
+	<div class="sidebar-cta">
+		<a href="/register/" class="sidebar-register-button">Register</a>
+	</div>
+</div>

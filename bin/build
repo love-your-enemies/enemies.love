@@ -9,6 +9,9 @@ const typography = require('metalsmith-typography')
 const widows = require('metalsmith-widow')
 const drafts = require('metalsmith-drafts')
 const layouts = require('metalsmith-layouts')
+const swig = require('metalsmith-swig-helpers')
+
+const filters = require('../lib/filters/')
 
 const speakers = require('../data/speakers')
 const sessions = require('../data/sessions')
@@ -31,15 +34,9 @@ const config = {
  * Denormalize speaker data
  */
 const denormalize = session => {
-	if (session.start) {
-		session.start = new Date(session.start)
-	}
-	if (session.speaker) {
-		session.speaker = speakers[session.speaker]
-	}
-	if (session.interviewees) {
-		session.interviewees = session.interviewees.map(id => speakers[id])
-	}
+	if (session.start) session.start = new Date(session.start)
+	if (session.speaker) session.speaker = speakers[session.speaker]
+	if (session.interviewees) session.interviewees = session.interviewees.map(id => speakers[id])
 	if (session.subSessions) {
 		session.subSessions = session.subSessions.map(session => {
 			session.isSubsession = true
@@ -68,10 +65,9 @@ const site = metalsmith(__dirname)
 		smartypants: true,
 		gfm: true
 	}))
-	.use(typography({
-		lang: 'en'
-	}))
+	.use(typography({ lang: 'en' }))
 	.use(permalinks(':title'))
+	.use(swig({ filters }))
 	.use(layouts({
 		engine: 'swig',
 		default: 'index.html',

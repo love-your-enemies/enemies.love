@@ -44,7 +44,7 @@
 			{
 				"type": "workshop",
 				"title": "Loving Toronto's Sexual Predators",
-				"subtitle": "Restorative justice and loving our sexual predators in our society",
+				"description": "Restorative justice and loving our sexual predators in our society. Excepteur sint occaecat cupidatat non proident.",
 				"speaker": "bsider",
 				"location": "Lower Commons"
 			},
@@ -88,7 +88,8 @@
 	{
 		"start": "2016-02-17T13:30:00.000Z",
 		"type": "podcast",
-		"title": "Group Interview with Mark Groleau",
+		"title": "WikiGod Podcast Interview",
+		"description": "Mark Groleau from the [WikiGod](http://www.wikigodpod.com/) podcast will be conducting a group interview with Tyndale Professors [Terry LeBlanc](#!) and [David Kupp](#!) about the role of contemporary Christianity in reshaping the culture of Toronto.",
 		"location": "Chapel",
 		"speaker": "mgroleau",
 		"interviewees": [
@@ -110,21 +111,21 @@
 			{
 				"type": "workshop",
 				"title": "Formation of Seminary Students",
-				"subtitle": "A formation of Seminary Students to “love your enemies”",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 				"speaker": "jclark",
 				"location": "Kimmerle Hall"
 			},
 			{
 				"type": "workshop",
 				"title": "Practical Spiritual Theology",
-				"subtitle": "Practical spiritual theology for Christian Leaders to “love their enemies”",
+				"description": "Practical spiritual theology for Christian Leaders to “love their enemies”",
 				"speaker": "smosteller",
 				"location": "Alumni Hall"
 			},
 			{
 				"type": "workshop",
 				"title": "Loving Those Affected by Trauma",
-				"description": "How to love someone who has experienced severe trauma in their life.",
+				"description": "How to love someone who has experienced severe trauma in their life. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 				"speaker": "mgoertz",
 				"location": "Kimmerle Hall"
 			},

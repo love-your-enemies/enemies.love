@@ -1,0 +1,10 @@
+
+.page-about {}
+
+.page-about .main {
+	padding: 4rem;
+}
+
+.colophon {
+	color: var(--gray);
+}

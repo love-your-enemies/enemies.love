@@ -35,8 +35,7 @@ watch: build
 		onchange "$(ASSETS)" -- make assets & \
 		cssnext --watch assets/css/index.css build/assets/bundle.css & \
 		watchify $(TRANSFORMS) assets/js/index.js -o build/assets/bundle.js & \
-		wtch build 2>&1 >/dev/null & \
-		bin/www & wait
+		budo --port $(PORT) --dir build --css build/assets/bundle.css --live & wait
 
 clean:
 	@rm -rf build

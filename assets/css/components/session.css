@@ -1,9 +1,9 @@
 
 .session {
-	position: relative;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAMAAABh9kWNAAAAA1BMVEX19fWwaZ+KAAAACklEQVR4AWNAAgAADAAB+560hQAAAABJRU5ErkJggg==);
 	background-position: 5px 0;
 	background-repeat: repeat-y;
+	position: relative;
 	display: flex;
 	max-width: 35em;
 	font-family: var(--calibre);
@@ -18,6 +18,7 @@
 .session-time {
 	display: flex;
 	align-items: center;
+	color: var(--dark-gray);
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 }
@@ -26,6 +27,7 @@
 	background: #fff;
 	border: 3px #9a9a9a solid;
 	border-radius: 50%;
+	box-shadow: 0 0 0 6px #fff;
 	position: relative;
 	display: inline-block;
 	margin: 0 1em 0 0;
@@ -33,18 +35,8 @@
 	height: 14px;
 }
 
-.session-time-circle::after {
-	border: 4px #fff solid;
-	border-radius: 50%;
-	content: "";
-	position: absolute;
-	top: -7px; left: -7px;
-	width: 22px;
-	height: 22px;
-}
-
 .session-time-ampm {
-	padding-left: 0.1em;
+	padding-left: 0.15em;
 	color: var(--gray);
 }
 
@@ -66,14 +58,18 @@
 }
 
 .session-title {
+	margin-bottom: 2rem;
 	color: var(--gray);
 	font-size: 16px;
 	line-height: 1;
-	margin-bottom: 0.75rem;
 }
 
 .session-description {
 	font-family: var(--calibre);
+}
+
+.session-description a {
+	border-bottom: 2px currentColor solid;
 }
 
 /**
@@ -81,13 +77,22 @@
  */
 
 .session-speaker-about {
+	position: relative;
 	display: flex;
-	margin-top: 1.25rem;
+	margin-top: 2rem;
+	color: var(--gray);
 }
 
 .session-speaker-image {
-	max-width: 72px;
+	box-shadow: 0 0 0 6px #fff;
+	/** **/
+	position: absolute;
+	top: -18px;
+	left: -184px;
+	/** **/
+	z-index: 9;
 	margin-right: 1rem;
+	max-width: 80px;
 	user-select: none;
 }
 
@@ -98,7 +103,6 @@
 
 .session-speaker-details {
 	display: flex;
-	flex: 1 0 auto;
 	flex-direction: column;
 	justify-content: center;
 }
@@ -111,28 +115,28 @@
 }
 
 .session-speaker-details-title {
+	margin-bottom: 1rem;
 	font-size: 14px;
+}
+
+.session-speaker-details-description {
+	font-size: 16px;
 }
 
 /**
  * Event-specific Overrides
  */
 
-.session--lecture .session-meta {
-	padding-top: 8px;
-}
-
-/*.session--lecture .session-title {
-	font-size: 32px;
-}*/
-
 .session--lecture .session-time-circle {
 	border-color: var(--green);
 }
 
+.session--qa .session-title {
+	font-size: 20px;
+}
+
 .session--qa .session-with {
 	color: var(--gray);
-	font-size: 20px;
 	font-weight: normal;
 }
 
@@ -152,17 +156,9 @@
 	font-size: 19px;
 }
 
-.session--group .session-meta {
-	padding-top: 10px;
-}
-
 .session--group .session-title {
 	color: var(--green);
 	font-size: 28px;
-}
-
-.session--podcast .session-meta {
-	padding-top: 28px;
 }
 
 .session--subsession .session-speaker {
@@ -174,19 +170,59 @@
 }
 
 .session--subsession .session-time-circle {
-	border: none;
 	background: #9a9a9a;
+	border: none;
+	left: 3px;
 	width: 7px;
 	height: 7px;
-	left: 3px;
 }
 
-.session--subsession .session-time-circle::after {
-	top: -5px; left: -4px;
-	width: 17px;
-	height: 17px;
+.session--podcast {}
+
+.session-interviewees {
+	display: flex;
+	margin-top: 1rem;
+}
+
+.interviewee {
+	font-size: 14px;
+}
+
+.interviewee-image {
+	max-width: 54px;
+}
+
+.interviewee-image img {
+	border-radius: 50%;
+}
+
+.interviewee-name {
+	font-weight: bold;
 }
 
 .session--after {
 	background-image: none;
+}
+
+/**
+ * Session Meta Alignment
+ *
+ * Different title type sizes need different alignment offsets,
+ * so they're all grouped here, rather than mixed in with the
+ * other category specific changes.
+ */
+.session--qa .session-meta {
+	padding-top: 7px;
+}
+.session--misc .session-meta {
+	padding-top: 3px;
+}
+.session--group .session-meta {
+	padding-top: 5px;
+}
+.session--podcast .session-meta {
+	padding-top: 8px;
+}
+.session--lecture .session-meta {
+	padding-top: 8px;
 }

@@ -11,19 +11,15 @@ input[type="text"],
 input[type="email"] {
 	background: #f2f2f2;
 	padding: 0.6em;
+	font-size: 20px;
 }
 
-button[type="submit"] {
-	background: var(--green);
+button {
+	background: var(--gray);
 	border-radius: 4px;
 	display: block;
-	padding: 0.5em 1em;
+	padding: 0.75em 1.25em;
 	color: var(--white);
 	font-family: var(--calibre);
-	font-size: 16px;
-}
-
-button[type="submit"][disabled] {
-	background: var(--gray);
-	color: var(--white);
+	font-size: 18px;
 }

@@ -13,10 +13,12 @@
 @import 'partials/typography';
 @import 'partials/forms';
 @import 'partials/sidebar';
+@import 'partials/utility';
 
 @import 'components/session';
 
 @import 'pages/home';
 @import 'pages/register';
+@import 'pages/about';
 
 @import 'partials/mobile';

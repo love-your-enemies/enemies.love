@@ -1,5 +1,6 @@
 
 {% set showSpeaker = speaker && type !== 'qa' %}
+{% set showBiography = type === 'lecture' || type === 'podcast' %}
 {% set isLast = last === true %}
 
 {# TODO: add subevent microformats #}
@@ -29,15 +30,31 @@
 		{% if location && isGuide %}
 			<div class="session-location">{{ location }}</div>
 		{% endif %}
-		<div class="session-description">{{ description }}</div>
+		<div class="session-description">{{ description | markdown | newtab | safe }}</div>
+		{% if type == 'podcast' %}
+			<div class="session-interviewees">
+			{% for person in interviewees %}
+				<div class="interviewee">
+					<div class="interviewee-image">
+						<img src="/assets/img/speakers/{{ person.name | replace(' ', '-', 'g') | lower }}.jpg" />
+					</div>
+					<div class="interviewee-name">{{ person.name }}</div>
+					<div class="interviewee-title">{{ person.title }}</div>
+				</div>
+			{% endfor %}
+			</div>
+		{% endif %}
 		{% if showSpeaker %}
 			<div class="session-speaker-about">
 				<div class="session-speaker-image">
 					<img src="/assets/img/speakers/{{ speaker.name | replace(' ', '-', 'g') | lower }}.jpg" />
 				</div>
 				<div class="session-speaker-details">
-					<div class="session-speaker-details-name">About {{ speaker.name }}</div>
+					<div class="session-speaker-details-name">{% if showBiography %}About {% endif %}{{ speaker.name }}</div>
 					<div class="session-speaker-details-title">{{ speaker.title }}</div>
+					{% if showBiography %}
+						<div class="session-speaker-details-description">{{ speaker.biography }}</div>
+					{% endif %}
 				</div>
 			</div>
 		{% endif %}

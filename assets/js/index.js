@@ -1,13 +1,18 @@
 
 import ready from 'domready'
-import monitor from 'scrollmonitor'
+
+import home from './lib/home'
+import register from './lib/register'
+
+const noop = () => {}
+
+const router = {
+	'home': home,
+	'register': register
+}
 
 ready(() => {
-
-	const sidebar = document.querySelector('.sidebar')
-	const scrollMarker = document.querySelector('[data-scroll-marker]')
-	const waypoint = monitor.create(scrollMarker)
-
-	waypoint.enterViewport(() => sidebar.classList.add('inactive'))
-	waypoint.exitViewport(() => sidebar.classList.remove('inactive'))
+	const id = document.head.querySelector('[property="page:id"]').content || 'default'
+	const fn = router[id] || noop
+	fn()
 })

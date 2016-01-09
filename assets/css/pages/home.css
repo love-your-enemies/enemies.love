@@ -12,10 +12,6 @@
 	padding: 0 2rem 0 0;
 }
 
-.section {
-	padding: 2rem 4rem;
-}
-
 .section-sponsors {
 	background: var(--light-gray);
 }
@@ -75,11 +71,21 @@
 }
 
 /**
+ * Description
+ */
+
+.section-description {
+	padding: 0 4rem 2rem 4rem;
+}
+
+/**
  * Schedule
  */
 
 .section-schedule {
-	padding: 4rem;
+	padding-top: 4rem;
+	padding-left: 10%;
+	padding-bottom: 4rem;
 }
 
 .section-schedule .section-header {
@@ -110,7 +116,7 @@
 }
 
 .section-schedule .session {
-	padding: 2.25rem 0;
+	padding: 3rem 0;
 }
 
 .section-schedule .session:first-of-type {
@@ -122,14 +128,14 @@
 	content: "";
 	position: absolute;
 	background: #fff;
-	top: 62px;
+	top: 68px;
 	left: 5px;
 	bottom: 0;
 	width: 5px;
 }
 
 .section-schedule .session--subsession {
-	padding: 1.5rem 0;
+	padding: 2rem 0;
 }
 
 /**

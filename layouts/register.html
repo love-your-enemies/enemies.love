@@ -10,16 +10,43 @@
 
 {% block main %}
 
-	<p>We provide a discount for students of Wycliffe and Tyndale Seminary.</p>
+	<div class="register-description">
+		<p>We provide a discount for students of Wycliffe and Tyndale Seminary.</p>
+	</div>
 
-	<form action="http://159.203.6.69:14984/stripe" method="POST">
+	<form action="http://159.203.6.69:14984/stripe" method="POST" class="form">
 	  <span class="payment-errors"></span>
+		<h3>Ticket</h3>
+		<div class="form-field">
+			<div class="form-field-label">
+				<label for="ticket_type">Ticket Type</label>
+			</div>
+			<div class="form-field-input">
+				<input type="radio" name="ticket_type" class="hidden" id="ticket_type_REGULAR" value="regular" checked />
+				<label class="ticket-type" for="ticket_type_REGULAR">
+					<div class="ticket-type-header">
+						<div class="ticket-type-title">Regular</div>
+						<div class="ticket-type-price">$40</div>
+					</div>
+					<div class="ticket-type-note">For everyone else.</div>
+				</label>
+				<input type="radio" name="ticket_type" class="hidden" id="ticket_type_STUDENT" value="student" />
+				<label class="ticket-type" for="ticket_type_STUDENT">
+					<div class="ticket-type-header">
+						<div class="ticket-type-title">Student</div>
+						<div class="ticket-type-price">$20</div>
+					</div>
+					<div class="ticket-type-note">For students of Wycliffe College or Tyndale Seminary. Valid Student ID required.</div>
+				</label>
+			</div>
+		</div>
+		<h3>About You</h3>
 		<div class="form-field">
 			<div class="form-field-label">
 				<label for="full_name">Full Name</label>
 			</div>
 			<div class="form-field-input">
-				<input type="text" name="full_name" id="full_name" />
+				<input type="text" name="full_name" size="35" id="full_name" />
 			</div>
 		</div>
 		<div class="form-field">
@@ -27,25 +54,16 @@
 				<label for="email">Email Address</label>
 			</div>
 			<div class="form-field-input">
-				<input type="email" name="email" />
-			</div>
-		</div>
-		<div class="form-field">
-			<div class="form-field-label">
-				<label for="ticket_type">Ticket Type</label>
-			</div>
-			<div class="form-field-input">
-				<label class="inline-label"><input type="radio" name="ticket_type" id="ticket_type_REGULAR" value="regular" checked /> Regular ($40)</label>
-				<label class="inline-label"><input type="radio" name="ticket_type" id="ticket_type_STUDENT" value="student" /> Student ($20)</label>
+				<input type="email" name="email" size="35" id="email" />
 			</div>
 		</div>
 		<h3>Payment Details</h3>
-	  <div class="form-field">
+		<div class="form-field">
 			<div class="form-field-label">
-				<label for="cc_number">Card Number</label>
+				<label for="card_number">Card Number</label>
 			</div>
 			<div class="form-field-input">
-				<input type="text" name="cc_number" id="cc_number" size="20" data-stripe="number"/>
+				<input type="text" pattern="\d*" name="card_number" id="card_number" size="40" data-stripe="card" />
 			</div>
 	  </div>
 	  <div class="form-field">
@@ -67,36 +85,15 @@
 				<span>MM / YYYY</span>
 			</div>
 	  </div>
-	  <button type="submit">Make Payment</button>
+		<div class="form-payment">
+		  <button type="submit" class="form-submit">
+				<span class="form-submit-prompt-text">Make Payment</span>
+				<span class="form-submit-loading-text">Submitting...</span>
+				<span class="form-submit-spinner"></span>
+			</button>
+			<span class="form-total">(Total $20 CAD)</span>
+		</div>
 	</form>
 	<script src="https://js.stripe.com/v2/"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script>
-	  Stripe.setPublishableKey('pk_test_VZPVSdywILB4qPH8LYdsw5il');
-		$(function () {
-			$('#payment-form').on('submit', function (e) {
-				e.preventDefault()
-				var $form = $(this)
-				$form.find('button').prop('disabled', true)
-		    Stripe.card.createToken($form, stripeResponseHandler)
-			})
-			function stripeResponseHandler(status, response) {
-				var $form = $('#payment-form')
-
-				if (response.error) {
-					// Show the errors on the form
-					$form.find('.payment-errors').text(response.error.message)
-					$form.find('button').prop('disabled', false)
-				} else {
-					// response contains id and card, which contains additional card details
-					var token = response.id
-					// Insert the token into the form so it gets submitted to the server
-					$form.append($('<input type="hidden" name="stripe_token" />').val(token))
-					// and submit
-					$form.get(0).submit()
-				}
-			}
-		})
-	</script>
 
 {% endblock %}

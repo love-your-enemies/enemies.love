@@ -1,11 +1,17 @@
 {% extends 'site.html' %}
 
+{% block id -%}
+	about
+{%- endblock %}
+
 {% block main %}
 
 	<h1>About</h1>
 
 	{{ contents | safe }}
 
-	<p>Site by <a href="http://rosszurowski.com/">Ross Zurowski</a></p>
+	<footer class="colophon">
+		<p>Site by <a href="http://rosszurowski.com/">Ross Zurowski</a></p>
+	</footer>
 
 {% endblock %}

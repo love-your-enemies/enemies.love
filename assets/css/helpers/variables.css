@@ -27,12 +27,15 @@
 	 */
 	--white: #fff;
 	--off-white: #f2f2f2;
-	--gray: #959595;
-	--lighter-gray: #e2e2e2;
 	--light-gray: #fafafa;
+	--lighter-gray: #e2e2e2;
+	--gray: #959595;
+	--dark-gray: #4a4a4a;
+	--black: #242424;
+
 	--light-green: #4fc08b;
 	--green: #28b171; /* #39a55d */
+	--darker-green: #23744e;
 	--dark-green: #10412f;
-	--black: #4a4a4a;
 
 }

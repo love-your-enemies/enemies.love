@@ -10,22 +10,144 @@
 	padding: 4rem;
 }
 
+.register-description {
+	font-size: 19px;
+	text-align: center;
+}
+
+.form {
+	margin: 2rem 0;
+}
+
+.form h3 {
+	margin: 4rem 0 2rem;
+	font-size: 26px;
+}
+
 .form-field {
 	display: flex;
+	align-items: flex-start;
 	align-items: center;
-	margin: 0.5rem 0;
+	margin: 0;
+	/*border-top: 1px #f2f2f2 solid;
+	border-bottom: 1px #f2f2f2 solid;*/
+	padding: 0.5rem 0;
 	font-family: var(--calibre);
 }
 
+.form-field + .form-field {
+	border-top: none;
+}
+
 .form-field-label {
-	flex: 1 0 auto;
-	max-width: 140px;
+	flex: 0 0 200px;
+	padding-top: 0.75rem;
+	align-self: flex-start;
 }
 
 .form-field-input {
-	flex: 1 0 auto;
+	display: flex;
+	align-items: stretch;
+	vertical-align: middle;
 }
 
-.page-register button[type="submit"] {
-	margin: 4rem auto 0;
+/**
+ * Ticket Types
+ */
+
+.ticket-type {
+	border: 1px #e0e0e0 solid;
+	padding: 0.75rem;
+	width: calc(50% - 1rem);
+	cursor: pointer;
+}
+
+.ticket-type ~ .ticket-type {
+	margin-left: 1rem;
+}
+
+input[type="radio"]:checked + .ticket-type {
+	background: #f2f2f2;
+	border: 1px #d2d2d2 solid;
+}
+
+.ticket-type-header {
+	display: flex;
+}
+
+.ticket-type-title {
+	margin-right: 0.5rem;
+	font-weight: bold;
+}
+
+.ticket-type-note {
+	font-size: 14px;
+}
+
+/**
+ * Payment Section
+ */
+
+.form-payment {
+	margin: 4rem 0 0;
+	text-align: center;
+}
+
+.form-submit {
+	background: var(--green);
+	display: flex;
+	align-items: center;
+	margin: 0 auto 0.5rem;
+	padding: 0.7rem 1.8rem;
+	font-weight: bold;
+	transition:
+		width 200ms ease,
+		padding 200ms ease;
+}
+
+.form-submit:hover {
+	background: var(--darker-green);
+	color: color(var(--white) alpha(-30%));
+}
+
+.form-submit[disabled],
+.form-submit[disabled]:hover {
+	background: var(--gray);
+	color: var(--off-white);
+}
+
+.form-submit-loading-text {
+	display: none;
+}
+
+.form-submit-spinner {
+	display: none;
+	border: 2px #fff solid;
+	border-radius: 50%;
+	margin-left: 1rem;
+	width: 14px;
+	height: 14px;
+}
+
+.form-submit--loading {
+	padding-left: 1.4rem;
+	padding-right: 1.4rem;
+}
+
+.form-submit--loading .form-submit-prompt-text {
+	display: none;
+}
+
+.form-submit--loading .form-submit-loading-text {
+	display: inline-block;
+}
+
+.form-submit--loading .form-submit-spinner {
+	display: inline-block;
+}
+
+.form-total {
+	color: #777;
+	font-family: var(--calibre);
+	font-size: 14px;
 }
