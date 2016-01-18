@@ -2,12 +2,14 @@
 .page-register {
 }
 
-.page-register .sidebar {
-	background: var(--black);
+.page-register .main {
+	padding: 3rem 4rem;
 }
 
-.page-register .main {
-	padding: 4rem;
+.register-headline {
+	margin-bottom: 3rem;
+	font-size: 36px;
+	text-align: center;
 }
 
 .register-description {
@@ -16,21 +18,28 @@
 }
 
 .form {
-	margin: 2rem 0;
+	margin: 2rem auto;
+	max-width: 620px;
 }
 
-.form h3 {
-	margin: 4rem 0 2rem;
-	font-size: 26px;
+.form-fieldset {
+	margin-bottom: 50px;
+}
+
+.form-fieldset-header {
+	margin-bottom: 0.5rem;
+	color: var(--gray);
+	font-family: var(--calibre);
+	font-size: 14px;
 }
 
 .form-field {
+	border-top: 1px #f2f2f2 solid;
+	border-bottom: 1px #f2f2f2 solid;
 	display: flex;
 	align-items: flex-start;
 	align-items: center;
 	margin: 0;
-	/*border-top: 1px #f2f2f2 solid;
-	border-bottom: 1px #f2f2f2 solid;*/
 	padding: 0.5rem 0;
 	font-family: var(--calibre);
 }
@@ -39,15 +48,20 @@
 	border-top: none;
 }
 
+.form-field--error .form-field-label {
+	color: var(--red);
+}
+
 .form-field-label {
 	flex: 0 0 200px;
-	padding-top: 0.75rem;
 	align-self: flex-start;
+	padding-top: 0.75rem;
 }
 
 .form-field-input {
 	display: flex;
-	align-items: stretch;
+	flex: 1 0 auto;
+	align-items: center;
 	vertical-align: middle;
 }
 
@@ -55,99 +69,223 @@
  * Ticket Types
  */
 
+.form-field-ticket-type {
+	border: none;
+	padding: 0;
+}
+
 .ticket-type {
 	border: 1px #e0e0e0 solid;
-	padding: 0.75rem;
-	width: calc(50% - 1rem);
+	flex-basis: 50%;
+	align-self: stretch;
+	padding: 16px 18px;
 	cursor: pointer;
 }
 
-.ticket-type ~ .ticket-type {
-	margin-left: 1rem;
+.ticket-type-standard {
+	border-right: none;
+	border-radius: 4px 0 0 4px;
 }
 
-input[type="radio"]:checked + .ticket-type {
+.ticket-type-student {
+	border-left: 1px transparent solid;
+	border-radius: 0 4px 4px 0;
+}
+
+.ticket-type.active {
 	background: #f2f2f2;
-	border: 1px #d2d2d2 solid;
+	border-color: #d2d2d2;
+}
+
+.ticket-type-standard.active ~ .ticket-type-student,
+.ticket-type-student.active {
+	border-left-color: #d2d2d2;
 }
 
 .ticket-type-header {
 	display: flex;
+	margin-bottom: 0.5rem;
+	line-height: 18px;
+}
+
+.ticket-type-bullet {
+	align-self: center;
+	margin: 0 0.65rem;
+	color: #888;
+	font-size: 11px;
 }
 
 .ticket-type-title {
-	margin-right: 0.5rem;
 	font-weight: bold;
 }
 
+.ticket-type-currency {
+	align-self: center;
+	margin-left: 0.45em;
+	color: #888;
+	font-size: 12px;
+}
+
 .ticket-type-note {
+	max-width: 20em;
+	color: #888;
 	font-size: 14px;
 }
+
+/**
+ * CVC & Expiry
+ */
+
+.form-field-cvc .cvc-number,
+.form-field-expiry .exp-month,
+.form-field-expiry .exp-year {
+	width: auto;
+	letter-spacing: 0.03em;
+}
+
+.form-field .card-number {
+	letter-spacing: 0.03em;
+}
+
+.form-field-expiry .exp-divider,
+.form-field-expiry .exp-format {
+	color: #888;
+	font-size: 16px;
+	cursor: default;
+}
+
+.form-field-expiry .exp-divider {
+	margin: 0 0.75rem;
+	user-select: none;
+}
+
+.form-field-expiry .exp-format {
+	margin: 0 0 0 1rem;
+}
+
 
 /**
  * Payment Section
  */
 
-.form-payment {
+.form-submit {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
 	margin: 4rem 0 0;
 	text-align: center;
 }
 
-.form-submit {
-	background: var(--green);
+.form-submit-security {
 	display: flex;
 	align-items: center;
+	padding-top: 0.35rem;
+	max-width: 22em;
+	color: var(--dark-gray);
+	font-family: var(--calibre);
+	font-size: 14px;
+	text-align: left;
+}
+
+.form-submit-security-icon {
+	flex: 1 0 16px;
+	margin-right: 1rem;
+}
+
+.form-submit-payment {
+	/*text-align: right;*/
+}
+
+.form-submit-button {
+	background: var(--green);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin: 0 auto 0.5rem;
 	padding: 0.7rem 1.8rem;
 	font-weight: bold;
-	transition:
-		width 200ms ease,
-		padding 200ms ease;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.form-submit:hover {
+.form-submit-button:not(.form-submit-button--loading):hover {
 	background: var(--darker-green);
 	color: color(var(--white) alpha(-30%));
 }
 
-.form-submit[disabled],
-.form-submit[disabled]:hover {
+.form-submit-button[disabled],
+.form-submit-button[disabled]:hover {
 	background: var(--gray);
 	color: var(--off-white);
 }
 
-.form-submit-loading-text {
-	display: none;
+.form-submit-button-prompt-text {
+	position: relative;
+	z-index: 2;
+	display: block;
+	opacity: 1.0;
+	width: 80px;
+	transition: width 700ms cubic-bezier(0.455, 0.030, 0.515, 0.955), opacity 250ms linear 50ms;
 }
 
-.form-submit-spinner {
-	display: none;
-	border: 2px #fff solid;
+.form-submit-button-loading-text {
+	position: absolute;
+	/**
+	 * NB: This `left` value should be kept in sync with the `padding-left` of
+	 * the `.form-submit-button` class.
+	 */
+	left: 1.2em;
+	opacity: 0.0;
+	transition: opacity 250ms linear 50ms;
+}
+
+.form-submit-button-spinner {
+	border: 2px var(--darker-green) solid;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
 	border-radius: 50%;
-	margin-left: 1rem;
+	position: absolute;
+	top: 50%;
+	right: 1.2em;
+	opacity: 0.0;
+	margin-top: -7px;
 	width: 14px;
 	height: 14px;
+	transition: opacity 500ms ease 200ms;
+	animation: rotate 500ms linear infinite;
+	animation-play-state: paused;
 }
 
-.form-submit--loading {
-	padding-left: 1.4rem;
-	padding-right: 1.4rem;
+.form-submit-button--loading .form-submit-button-prompt-text {
+	opacity: 0.0;
+	width: 110px;
 }
 
-.form-submit--loading .form-submit-prompt-text {
-	display: none;
+.form-submit-button--loading .form-submit-button-loading-text {
+	opacity: 1.0;
 }
 
-.form-submit--loading .form-submit-loading-text {
-	display: inline-block;
+.form-submit-button--loading .form-submit-button-spinner {
+	opacity: 1.0;
+	animation-play-state: running;
 }
 
-.form-submit--loading .form-submit-spinner {
-	display: inline-block;
-}
-
-.form-total {
+.form-submit-error,
+.form-submit-total {
+	display: block;
 	color: #777;
 	font-family: var(--calibre);
 	font-size: 14px;
+}
+
+.form-submit-error {
+	display: none;
+	margin-bottom: 0.25rem;
+	padding-right: 0;
+	color: var(--red);
+}
+
+.form--has-errors .form-submit-error {
+	display: block;
 }

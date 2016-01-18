@@ -1,4 +1,5 @@
 ---
+id: conduct
 title: Code of Conduct
 permalink: conduct
 layout: conduct.html

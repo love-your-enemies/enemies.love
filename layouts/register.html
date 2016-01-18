@@ -1,99 +1,119 @@
 {% extends 'site.html' %}
 
-{% block id -%}
-	register
-{%- endblock %}
-
-{% block headline -%}
-	Register
-{%- endblock %}
-
 {% block main %}
 
-	<div class="register-description">
-		<p>We provide a discount for students of Wycliffe and Tyndale Seminary.</p>
-	</div>
+	<h2 class="register-headline">Attend the Colloquium</h2>
 
-	<form action="http://159.203.6.69:14984/stripe" method="POST" class="form">
+	<form class="form" novalidate>
 	  <span class="payment-errors"></span>
-		<h3>Ticket</h3>
-		<div class="form-field">
-			<div class="form-field-label">
-				<label for="ticket_type">Ticket Type</label>
-			</div>
-			<div class="form-field-input">
-				<input type="radio" name="ticket_type" class="hidden" id="ticket_type_REGULAR" value="regular" checked />
-				<label class="ticket-type" for="ticket_type_REGULAR">
+		<fieldset class="form-fieldset fieldset-ticket-type">
+			<h4 class="form-fieldset-header">Ticket Type</h4>
+			<div class="form-field form-field-ticket-type">
+				<input type="hidden" name="ticket_type" value="standard" />
+				<div class="ticket-type ticket-type-standard active" data-value="standard">
 					<div class="ticket-type-header">
-						<div class="ticket-type-title">Regular</div>
-						<div class="ticket-type-price">$40</div>
+						<span class="ticket-type-title">General</span>
+						<span class="ticket-type-bullet">&bull;</span>
+						<span class="ticket-type-price">$40</span>
+						<span class="ticket-type-currency">CAD</span>
 					</div>
-					<div class="ticket-type-note">For everyone else.</div>
-				</label>
-				<input type="radio" name="ticket_type" class="hidden" id="ticket_type_STUDENT" value="student" />
-				<label class="ticket-type" for="ticket_type_STUDENT">
+					<div class="ticket-type-note">Access to the full-day conference, with lunch and&nbsp;refreshments provided.</div>
+				</div>
+				<div class="ticket-type ticket-type-student" data-value="student">
 					<div class="ticket-type-header">
-						<div class="ticket-type-title">Student</div>
-						<div class="ticket-type-price">$20</div>
+						<span class="ticket-type-title">Student</span>
+						<span class="ticket-type-bullet">&bull;</span>
+						<span class="ticket-type-price">$20</span>
+						<span class="ticket-type-currency">CAD</span>
 					</div>
-					<div class="ticket-type-note">For students of Wycliffe College or Tyndale Seminary. Valid Student ID required.</div>
-				</label>
+					<div class="ticket-type-note">50% off general admission price for Tyndale or Wycliffe students. Valid&nbsp;student ID required.</div>
+				</div>
 			</div>
-		</div>
-		<h3>About You</h3>
-		<div class="form-field">
-			<div class="form-field-label">
-				<label for="full_name">Full Name</label>
+		</fieldset>
+		<fieldset class="form-fieldset">
+			<h4 class="form-fieldset-header">About You</h4>
+			<div class="form-field">
+				<div class="form-field-label">
+					<label for="name">Full Name</label>
+				</div>
+				<div class="form-field-input">
+					<input type="text" name="name" id="name" required />
+				</div>
 			</div>
-			<div class="form-field-input">
-				<input type="text" name="full_name" size="35" id="full_name" />
+			<div class="form-field">
+				<div class="form-field-label">
+					<label for="email">Email Address</label>
+				</div>
+				<div class="form-field-input">
+					<input type="email" name="email" id="email" required />
+				</div>
 			</div>
-		</div>
-		<div class="form-field">
-			<div class="form-field-label">
-				<label for="email">Email Address</label>
+			<div class="form-field hidden" data-show="ticket_type:student">
+				<div class="form-field-label">
+					<label for="student_id">Student ID</label>
+				</div>
+				<div class="form-field-input">
+					<input type="text" name="student_id" id="student_id" />
+				</div>
 			</div>
-			<div class="form-field-input">
-				<input type="email" name="email" size="35" id="email" />
+		</fieldset>
+		<fieldset class="form-fieldset">
+			<h4 class="form-fieldset-header">Payment Details</h4>
+			<div class="form-field">
+				<div class="form-field-label">
+					<label for="card_name">Name on Card</label>
+				</div>
+				<div class="form-field-input">
+					<input type="text" id="card_name" class="card-name" autocompletetype="cc-name" data-stripe="name" required />
+				</div>
 			</div>
-		</div>
-		<h3>Payment Details</h3>
-		<div class="form-field">
-			<div class="form-field-label">
-				<label for="card_number">Card Number</label>
+			<div class="form-field">
+				<div class="form-field-label">
+					<label for="card_number">Card Number</label>
+				</div>
+				<div class="form-field-input">
+					<input type="text" pattern="\d*" id="card_number" class="card-number" autocompletetype="cc-number" data-stripe="number" required />
+				</div>
 			</div>
-			<div class="form-field-input">
-				<input type="text" pattern="\d*" name="card_number" id="card_number" size="40" data-stripe="card" />
+			<div class="form-field form-field-expiry">
+				<div class="form-field-label">
+					<label for="exp_month">Expiry Date</label>
+				</div>
+				<div class="form-field-input">
+					<input type="text" size="6" id="exp_month" class="exp-month" maxlength="2" autocompletetype="cc-exp-month" data-stripe="exp_month" required />
+					<span class="exp-divider">/</span>
+					<input type="text" size="6" id="exp_year" class="exp-year" maxlength="4" autocompletetype="cc-exp-year" data-stripe="exp_year" required />
+					<span class="exp-format"><label for="exp_month">MM</label> / <label for="exp_year">YYYY</label></span>
+				</div>
 			</div>
-	  </div>
-	  <div class="form-field">
-			<div class="form-field-label">
-				<label for="cvc_number">CVC</label>
+			<div class="form-field form-field-cvc">
+				<div class="form-field-label">
+					<label for="cvc_number">CVC</label>
+				</div>
+				<div class="form-field-input">
+					<input type="text" id="cvc_number" class="cvc-number" size="6" maxlength="4" data-stripe="cvc" required autocomplete="off" />
+				</div>
 			</div>
-			<div class="form-field-input">
-				<input type="text" name="cvc_number" id="cvc_number" size="4" data-stripe="cvc"/>
+		</fieldset>
+		<div class="form-submit">
+			<div class="form-submit-security">
+				<svg class="form-submit-security-icon" width="12px" height="16px" viewBox="0 0 12 16">
+				  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				    <path d="M11,7 L10,7 L10,4 C10,1.7962963 8.2037037,0 6,0 C3.7962963,0 2,1.7962963 2,4 L2,7 L1,7 C0.444444444,7 0,7.44444444 0,8 L0,15 C0,15.5555556 0.444444444,16 1,16 L11,16 C11.5555556,16 12,15.5555556 12,15 L12,8 C12,7.44444444 11.5555556,7 11,7 Z M4,4 C4,2.88888889 4.88888889,2 6,2 C7.11111111,2 8,2.88888889 8,4 L8,7 L4,7 L4,4 Z" fill="#343434"></path>
+				  </g>
+				</svg>
+				<p>Payment is secure and encrypted. Credit&nbsp;card information is never stored.</p>
 			</div>
-	  </div>
-	  <div class="form-field">
-			<div class="form-field-label">
-				<span>Expiry Date</span>
+			<div class="form-submit-payment">
+			  <button type="submit" class="form-submit-button">
+					<span class="form-submit-button-prompt-text">Register</span>
+					<span class="form-submit-button-loading-text">Processing...</span>
+					<span class="form-submit-button-spinner"></span>
+				</button>
+				<span class="form-submit-error">Please check for errors.</span>
+				<span class="form-submit-total">(Total $<span data-bind="price">40</span> CAD)</span>
 			</div>
-			<div class="form-field-input">
-				<input type="text" size="2" data-stripe="exp-month"/>
-				<span> / </span>
-				<input type="text" size="4" data-stripe="exp-year"/>
-				<span>MM / YYYY</span>
-			</div>
-	  </div>
-		<div class="form-payment">
-		  <button type="submit" class="form-submit">
-				<span class="form-submit-prompt-text">Make Payment</span>
-				<span class="form-submit-loading-text">Submitting...</span>
-				<span class="form-submit-spinner"></span>
-			</button>
-			<span class="form-total">(Total $20 CAD)</span>
 		</div>
 	</form>
-	<script src="https://js.stripe.com/v2/"></script>
 
 {% endblock %}

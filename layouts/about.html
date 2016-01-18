@@ -1,17 +1,18 @@
 {% extends 'site.html' %}
 
-{% block id -%}
-	about
-{%- endblock %}
-
 {% block main %}
 
-	<h1>About</h1>
-
-	{{ contents | safe }}
-
-	<footer class="colophon">
-		<p>Site by <a href="http://rosszurowski.com/">Ross Zurowski</a></p>
-	</footer>
+	<div class="column">
+		<div class="about">
+			{{ contents | safe }}
+		</div>
+		<div class="contact">
+			<a href="https://twitter.com/{{ contact.twitter }}">@{{ contact.twitter }}</a>
+			<a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+		</div>
+		<footer class="colophon">
+			<p>Site by <a href="http://rosszurowski.com/">Ross Zurowski</a></p>
+		</footer>
+	</div>
 
 {% endblock %}

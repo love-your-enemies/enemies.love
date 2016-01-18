@@ -1,0 +1,17 @@
+{% extends 'site.html' %}
+
+{% block main %}
+
+	<header class="thanks-header">
+		<h2 class="thanks-headline">Thanks!</h2>
+	</header>
+
+	<div class="thanks-content">
+		{{ contents | safe }}
+	</div>
+
+	<footer class="thanks-footer">
+		<a href="/">Return Home</a>
+	</footer>
+
+{% endblock %}

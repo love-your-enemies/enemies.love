@@ -33,9 +33,18 @@
 	--dark-gray: #4a4a4a;
 	--black: #242424;
 
+	--red: #f96b52;
+
 	--light-green: #4fc08b;
 	--green: #28b171; /* #39a55d */
 	--darker-green: #23744e;
 	--dark-green: #10412f;
+
+	/**
+	 * Animation
+	 */
+	--base-duration: 450ms;
+	--page-transition-duration: 300ms;
+	--base-ease: cubic-bezier(0.230, 1.000, 0.320, 1.000);
 
 }

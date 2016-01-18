@@ -22,7 +22,7 @@
 		"title": "Associate Professor of Global Christianity at Tyndale Seminary",
 		"biography": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"links": [
-			{ "label": "Faculty", "url": "https://www.tyndale.ca/faculty/wafik-wahba" }
+			{ "label": "Tyndale", "url": "https://www.tyndale.ca/faculty/wafik-wahba" }
 		]
 	},
 	"mgoertz": {
@@ -39,7 +39,7 @@
 		"title": "Professor of Old Testament at Tyndale Seminary",
 		"biography": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"links": [
-			{ "label": "Faculty", "url": "https://www.tyndale.ca/faculty/barbara-leung-lai" }
+			{ "label": "Tyndale", "url": "https://www.tyndale.ca/faculty/barbara-leung-lai" }
 		]
 	},
 	"awoolger": {
@@ -62,11 +62,11 @@
 	},
 	"tleblanc": {
 		"name": "Terry LeBlanc",
-		"title": "Indigenous Studies Program Director at Tyndale Seminary",
+		"title": "Indigenous Studies Director at Tyndale Seminary",
 		"biography": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"twitter": "markgroleau",
 		"links": [
-			{ "label": "Faculty", "url": "https://www.tyndale.ca/faculty/terry-leblanc" }
+			{ "label": "Tyndale", "url": "https://www.tyndale.ca/faculty/terry-leblanc" }
 		]
 	},
 	"dkupp": {
@@ -80,14 +80,13 @@
 		"title": "Senior Academic Vice President at Tyndale Seminary",
 		"biography": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"links": [
-			{ "label": "Faculty", "url": "https://www.tyndale.ca/faculty/janet-clark" }
+			{ "label": "Tyndale", "url": "https://www.tyndale.ca/faculty/janet-clark" }
 		]
 	},
 	"smosteller": {
 		"name": "Sue Mosteller",
 		"title": "Sister of St. Joseph",
 		"biography": "Toronto Author, Member of the Sisters of St. Joseph, Trustee of the Henri Nouwen Legacy, and former leader in the L'Arche and Daybreak Communities.",
-		"twitter": "suemost123",
 		"links": []
 	},
 	"bsider": {

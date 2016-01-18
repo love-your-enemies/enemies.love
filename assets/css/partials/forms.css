@@ -9,9 +9,23 @@ button[type="submit"] {
 
 input[type="text"],
 input[type="email"] {
-	background: #f2f2f2;
-	padding: 0.6em;
+	background: #f6f6f6;
+	border: 1px #eaeaea solid;
+	border-radius: 2px;
+	padding: 0.55em;
+	width: 100%;
 	font-size: 20px;
+	transition: border 150ms var(--base-ease);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+	border: 1px #ccc solid;
+}
+
+fieldset {
+	padding: 0;
+	border: none;
 }
 
 button {

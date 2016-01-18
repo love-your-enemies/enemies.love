@@ -2,7 +2,10 @@
 	"site": {
 		"title": "Love Your Enemies",
 		"description": "A practical theology conference in Toronto, Canada, run by students at Tyndale Seminary.",
-		"url": "https://enemies.love/"
+		"url": "https://enemies.love/",
+		"api": {
+			"payment": "http://159.203.6.69:14984/stripe"
+		}
 	},
 	"event": {
 		"title": "Love Your Enemies",
@@ -19,7 +22,7 @@
 		}
 	},
 	"contact": {
-		"name": "Ben Bartosik",
-		"email": "ben.bartosik@gmail.com"
+		"email": "info@enemies.love",
+		"twitter": "enemieslove"
 	}
 }

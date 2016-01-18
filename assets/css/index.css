@@ -11,14 +11,16 @@
 
 @import 'partials/base';
 @import 'partials/typography';
+@import 'partials/navigation';
 @import 'partials/forms';
 @import 'partials/sidebar';
-@import 'partials/utility';
 
 @import 'components/session';
 
 @import 'pages/home';
 @import 'pages/register';
 @import 'pages/about';
+@import 'pages/thanks';
 
+@import 'partials/utility';
 @import 'partials/mobile';

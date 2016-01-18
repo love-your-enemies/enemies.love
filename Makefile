@@ -9,6 +9,7 @@ BIN := ./node_modules/.bin
 # Variables
 #
 
+HOST      ?= localhost
 PORT      ?= 8080
 NODE_ENV  ?= development
 
@@ -35,7 +36,8 @@ watch: build
 		onchange "$(ASSETS)" -- make assets & \
 		cssnext --watch assets/css/index.css build/assets/bundle.css & \
 		watchify $(TRANSFORMS) assets/js/index.js -o build/assets/bundle.js & \
-		budo --port $(PORT) --dir build --css build/assets/bundle.css --live & wait
+		wtch --dir build > /dev/null 2>&1 & \
+		budo --host $(HOST) --port $(PORT) --dir build --css build/assets/bundle.css & wait
 
 clean:
 	@rm -rf build
@@ -65,7 +67,7 @@ deploy\:staging:
 		git add . && \
 		git commit -q -m "Deployment (auto-commit)" && \
 		echo "\033[0;90m" && \
-		surge . love-your-enemies-staging.surge.sh \
+		surge . https://love-your-enemies-staging.surge.sh \
 		echo "\033[0m")
 	@echo "Deployed to \033[0;32mhttp://love-your-enemies-staging.surge.sh/\033[0m"
 

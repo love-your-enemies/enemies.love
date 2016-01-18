@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block body %}
-	<div class="page page-{% block id %}default{% endblock %}">
+	<div class="page page-{{ id | default('default') }}">
 		{% include 'partials/sidebar.html' %}
-		<main class="main">
+		<main class="main" data-main>
 			{% block main %}
 			{% endblock %}
 		</main>

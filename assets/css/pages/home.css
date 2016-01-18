@@ -2,16 +2,6 @@
 .page-home {
 }
 
-.nav {
-	position: absolute;
-	top: 2rem;
-	left: calc(var(--sidebar-width) + 4rem);
-}
-
-.nav a {
-	padding: 0 2rem 0 0;
-}
-
 .section-sponsors {
 	background: var(--light-gray);
 }
@@ -31,15 +21,14 @@
 	flex-direction: column;
 	justify-content: center;
 	padding: 0 4rem 0;
-	margin-bottom: 8rem;
-	height: 90vh;
+	height: 100vh;
 	text-align: center;
 }
 
 .intro-headline {
 	margin: 0 auto 2rem;
-	max-width: 16em;
-	font-size: 42px;
+	max-width: 15.75em;
+	font-size: 34px;
 	text-align: center;
 }
 
@@ -47,6 +36,8 @@
 	position: relative;
 	top: -2px;
 	width: 0.35em;
+	height: auto;
+	line-height: 1;
 	vertical-align: middle;
 }
 
@@ -76,6 +67,8 @@
 
 .section-description {
 	padding: 0 4rem 2rem 4rem;
+	font-size: 24px;
+	text-align: center;
 }
 
 /**
@@ -86,6 +79,7 @@
 	padding-top: 4rem;
 	padding-left: 10%;
 	padding-bottom: 4rem;
+	width: 90%;
 }
 
 .section-schedule .section-header {
@@ -124,16 +118,6 @@
 	margin-top: 2.5rem;
 }
 
-.section-schedule .session--last::after {
-	content: "";
-	position: absolute;
-	background: #fff;
-	top: 68px;
-	left: 5px;
-	bottom: 0;
-	width: 5px;
-}
-
 .section-schedule .session--subsession {
 	padding: 2rem 0;
 }
@@ -143,6 +127,12 @@
  */
 
 .section-register {
-	padding: 4rem 4rem;
+	padding: 4rem 4rem 12rem;
 	text-align: center;
+}
+
+.section-register a {
+	font-size: 20px;
+	margin: 0 0.5em;
+	border-bottom: 2px #ccc solid;
 }

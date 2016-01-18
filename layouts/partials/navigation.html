@@ -1,0 +1,15 @@
+
+<nav class="nav">
+	<a href="/" {%- if id == 'home' %} class="active"{% endif %} data-id="home">
+		<span class="nav-text">Home</span>
+	</a>
+	<a href="/schedule/" {%- if id == 'schedule' %} class="active"{% endif %} data-id="schedule">
+		<span class="nav-text">Schedule</span>
+	</a>
+	<a href="/about/" {%- if id == 'about' %} class="active"{% endif %} data-id="about">
+		<span class="nav-text">About &amp; Contact</span>
+	</a>
+	<a href="/register/" class="callout {%- if id == 'register' %} active{% endif %}" data-id="register">
+		<span class="nav-text">Register</span>
+	</a>
+</nav>

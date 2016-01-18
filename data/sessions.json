@@ -3,23 +3,22 @@
 		"start": "2016-02-17T09:30:00.000Z",
 		"type": "misc",
 		"title": "Introduction",
-		"description": "Join us as we kick of the day off with a few words from the organizers.",
 		"location": "Chapel"
 	},
 	{
 		"start": "2016-02-17T09:45:00.000Z",
 		"type": "lecture",
-		"title": "Building a City That Loves its Enemies",
-		"description": "Practical theology is an academic discipline that examines and reflects on religious practices in order to understand the theology that is enacted in those practices. Theological theory and theological practices can be more fully aligned, changed, or improved.",
+		"title": "Befriending Enemies: Within and Without",
+		"description": "The worst enemy we face can be within.  Empowering this enemy restricts our capacities to serve and to love.  Likewise, our 'other' enemies interfere with our journey of becoming truly human.  The process of befriending enemies is impossible, tough, and potent, but contains the power/living water, to transform our journeys as true followers of Jesus.",
 		"location": "Chapel",
-		"speaker": "jkeesmaat",
+		"speaker": "smosteller",
 		"subSessions": [
 			{
 				"type": "qa",
 				"start": "2016-02-17T10:15:00.000Z",
 				"title": "Q&A",
-				"description": "Following her talk, Jennifer will be hosting a Q&A session around what it means to love our enemies.",
-				"speaker": "jkeesmaat"
+				"description": "Following her talk, there will be a Q&A session around what it means to love our enemies.",
+				"speaker": "smosteller"
 			}
 		]
 	},
@@ -36,8 +35,8 @@
 		"subSessions": [
 			{
 				"type": "workshop",
-				"title": "A Global Perspective on Christians Loving their Enemies",
-				"description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+				"title": "Understanding Current Dynamics in the World of Islam",
+				"description": "Current world events require deeper understanding of the world of Islam where religion, politics and economy are very much intertwined. A deeper understanding of Islamic religious beliefs will help us navigate the current complexities of  political and social upheavals. Issues like human rights and freedom will be explored from religious and historical perspectives. ",
 				"speaker": "wwahba",
 				"location": "Chapel"
 			},
@@ -47,21 +46,6 @@
 				"description": "Restorative justice and loving our sexual predators in our society. Excepteur sint occaecat cupidatat non proident.",
 				"speaker": "bsider",
 				"location": "Lower Commons"
-			},
-			{
-				"type": "workshop",
-				"title": "Loving Toronto's Sex Workers",
-				"description": "What it's like to serve and love female sex workers in Toronto. Excepteur sint occaecat cupidatat non proident.",
-				"speaker": "jyee",
-				"location": "Kimmerle Hall"
-			},
-			{
-				"type": "workshop",
-				"title": "Old Testament",
-				"subtitle": "An Old Testament theological perspective on loving your enemies",
-				"speaker": "bleunglai",
-				"location": "Lower Commons",
-				"description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 			}
 		]
 	},
@@ -73,8 +57,8 @@
 	{
 		"start": "2016-02-17T12:00:00.000Z",
 		"type": "lecture",
-		"title": "What it Takes to be a Presence of Love to Canada’s Newcomers",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"title": "Our Tears are All the Same Colour",
+		"description": "It will examine Jesus command to love our enemies, pray for those who persecute us and to love our neighbour as ourselves. It will look at samples from scripture of radical hospitality as well as experiences at Matthew House (refugee ministry) Toronto and challenge people to overcome their fears and reach out and love the outsiders and strangers on our doorstep.",
 		"location": "Chapel",
 		"speaker": "awoolger"
 	},
@@ -83,7 +67,7 @@
 		"type": "misc",
 		"title": "Lunch",
 		"subtitle": "with Roundtable Discussion",
-		"description": "As we share in a provided lunch, professors from Tyndale Seminary will be hosting a roundtable discussion about the Christian response to Syrian Refugee Crisis."
+		"description": "As we share in lunch, professors from Tyndale Seminary will be hosting a roundtable discussion about the Christian response to Syrian Refugee Crisis."
 	},
 	{
 		"start": "2016-02-17T13:30:00.000Z",
@@ -110,7 +94,7 @@
 		"subSessions": [
 			{
 				"type": "workshop",
-				"title": "Formation of Seminary Students",
+				"title": "A Vision for the Formation of Seminary Students",
 				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 				"speaker": "jclark",
 				"location": "Kimmerle Hall"
@@ -124,15 +108,8 @@
 			},
 			{
 				"type": "workshop",
-				"title": "Loving Those Affected by Trauma",
-				"description": "How to love someone who has experienced severe trauma in their life. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-				"speaker": "mgoertz",
-				"location": "Kimmerle Hall"
-			},
-			{
-				"type": "workshop",
-				"title": "Radical Hospitality",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				"title": "Radical Hospitality: Welcoming the Stranger ",
+				"description": "What are the theological stakes involved in welcoming the stranger? This workshop explores several dimensions of hospitality, drawing on insights from the bible, theology, philosophy, and lived experience.",
 				"speaker": "jmckinney",
 				"location": "Alumni Hall"
 			}

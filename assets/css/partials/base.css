@@ -10,8 +10,8 @@ body {
 	font-size: var(--base-font-size);
 	line-height: var(--base-line-height);
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0.0);
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	/*-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;*/
 }
 
 .page {
@@ -23,4 +23,9 @@ body {
 .main {
 	flex: 0 0 calc(100% - var(--sidebar-width));
 	margin-left: var(--sidebar-width);
+	transition: opacity var(--page-transition-duration) ease;
+}
+
+.page-transition .main {
+	opacity: 0.0;
 }

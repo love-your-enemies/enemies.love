@@ -11,8 +11,11 @@
   },
   "license": "MIT",
   "dependencies": {
+    "dom": "0.0.3",
+    "domify": "^1.4.0",
     "domready": "^1.0.8",
-    "scrollmonitor": "^1.0.12"
+    "page": "^1.6.4",
+    "payment": "0.0.12"
   },
   "devDependencies": {
     "@rosszurowski/normalize": "^0.1.1",

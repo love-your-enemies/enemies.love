@@ -65,7 +65,7 @@ const site = metalsmith(__dirname)
 		smartypants: true,
 		gfm: true
 	}))
-	.use(typography({ lang: 'en' }))
+	// .use(typography({ lang: 'en' }))
 	.use(permalinks(':title'))
 	.use(swig({ filters }))
 	.use(layouts({
@@ -84,6 +84,7 @@ const site = metalsmith(__dirname)
  */
 site.build(err => {
 	if (err) {
+		process.stdout.write('\x07')
 		console.log(chalk.red('Error:'), err.message)
 		console.log(chalk.gray(err.stack))
 		process.exit(1)
