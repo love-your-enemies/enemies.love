@@ -52,6 +52,17 @@
 	flex-grow: 1;
 }
 
+.session-content .small {
+	display: block;
+	margin-top: 1.5rem;
+	color: var(--gray);
+	font-size: 14px;
+}
+
+.session-content .session-time {
+	display: none;
+}
+
 .session-speaker {
 	margin-bottom: 0.25rem;
 	font-size: 28px;
@@ -63,10 +74,11 @@
 	margin-bottom: 2rem;
 	color: var(--gray);
 	font-size: 18px;
-	line-height: 1;
+	line-height: 1.2;
 }
 
 .session-description {
+	margin-bottom: 2rem;
 	font-family: var(--calibre);
 }
 
@@ -88,7 +100,6 @@
 	border-radius: 4px;*/
 	position: relative;
 	display: flex;
-	margin-top: 2rem;
 	width: 80%;
 	/*padding: 2rem;*/
 	/*color: var(--gray);*/
@@ -180,7 +191,7 @@
 .session--group .session-title {
 	color: var(--green);
 	font-family: "Lydian";
-	font-size: 56px;
+	font-size: 42px;
 	line-height: 1;
 }
 
@@ -208,9 +219,20 @@
 }
 
 .session-interviewees {
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+}
+
+.session-interviewees-header {
+	margin-bottom: 2rem;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.session-interviewees-list {
 	display: flex;
-	margin-top: 2rem;
-	margin-bottom: 1rem;
 }
 
 .interviewee {
@@ -270,7 +292,7 @@
 	padding-top: 3px;
 }
 .session--group .session-meta {
-	padding-top: 20px;
+	padding-top: 10px;
 }
 .session--podcast .session-meta {
 	padding-top: 8px;

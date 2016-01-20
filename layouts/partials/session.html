@@ -1,6 +1,7 @@
 
 {% set showSpeaker = speaker && type !== 'qa' %}
 {% set showBiography = type === 'lecture' || type === 'podcast' %}
+{% set showTime = start && !isSubsession %}
 {% set isLast = last === true -%}
 
 {# TODO: add subevent microformats #}
@@ -8,7 +9,7 @@
 	<div class="session-meta">
 		<div class="session-time">
 			<span class="session-time-circle"></span>
-			{% if start && !isSubsession %}
+			{% if showTime %}
 				<span class="session-time-hhmm">{{ start | date('g:i') }}</span>
 				<span class="session-time-ampm">{{ start | date('a') }}</span>
 			{% endif %}
@@ -20,6 +21,12 @@
 		{% endif %}
 	</div>
 	<div class="session-content">
+		{% if showTime %}
+			<div class="session-time">
+				<span class="session-time-hhmm">{{ start | date('g:i') }}</span>
+				<span class="session-time-ampm">{{ start | date('a') }}</span>
+			</div>
+		{% endif %}
 		{% if showSpeaker %}
 			<div class="session-speaker">{{ speaker.name }}</div>
 		{% endif %}
@@ -35,22 +42,25 @@
 		{% if location && isGuide %}
 			<div class="session-location">{{ location }}</div>
 		{% endif %}
-		{% if description %}
+		{% if description && description.length %}
 		<div class="session-description">{{ description | markdown | newtab | safe }}</div>
 		{% endif %}
 		{% if type == 'podcast' %}
 			<div class="session-interviewees">
-			{% for person in interviewees %}
-				<div class="interviewee">
-					<div class="interviewee-image">
-						<img src="/assets/img/speakers/{{ person.name | replace(' ', '-', 'g') | lower }}.jpg" />
-					</div>
-					<div class="interviewee-details">
-						<div class="interviewee-name">{{ person.name }}</div>
-						<div class="interviewee-title">{{ person.title }}</div>
-					</div>
+				<div class="session-interviewees-header">Interviewing</div>
+				<div class="session-interviewees-list">
+					{% for person in interviewees %}
+						<div class="interviewee">
+							<div class="interviewee-image">
+								<img src="/assets/img/speakers/{{ person.name | replace(' ', '-', 'g') | lower }}.jpg" />
+							</div>
+							<div class="interviewee-details">
+								<div class="interviewee-name">{{ person.name }}</div>
+								<div class="interviewee-title">{{ person.title }}</div>
+							</div>
+						</div>
+					{% endfor %}
 				</div>
-			{% endfor %}
 			</div>
 		{% endif %}
 		{% if showSpeaker %}

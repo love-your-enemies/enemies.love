@@ -8,7 +8,7 @@ import dom from 'dom'
 import domify from 'domify'
 
 import home from './routes/home'
-import register from './routes/register'
+// import register from './routes/register'
 
 
 ready(() => {
@@ -18,17 +18,20 @@ ready(() => {
 	const main = dom(mainSelector)
 	const nav = dom('.nav')
 
-	let prev
-
 	router('*', transition)
 	router('/', home)
 	router('/schedule', home)
-	router('/register', register)
 	router.start()
 
 	function transition (ctx, next) {
 		if (ctx.init) {
-			prev = ctx
+			console.log('setting prev to', ctx.path)
+			router.prev = ctx
+			next()
+			return
+		}
+
+		if (isSamePath(ctx.path, router.prev.path)) {
 			next()
 			return
 		}
@@ -41,10 +44,11 @@ ready(() => {
 			.then(res => res.text())
 			.then(handleResponse)
 			.then(_ => next())
+			.then(_ => router.prev = ctx)
 			.catch(err => {
 				console.error(err)
 				// Fallback to just changing the page
-				window.location.pathname = ctx.path
+				// window.location.pathname = ctx.path
 			})
 
 		function handleResponse (res) {
@@ -72,8 +76,14 @@ ready(() => {
 				}, 300)
 			})
 		}
-
-		prev = ctx
 	}
 
 })
+
+
+function isSamePath (curr, prev) {
+	if (curr === prev) return true
+	if (curr === '/' && prev === '/schedule/') return true
+	if (curr === '/schedule/' && prev === '/') return true
+	return false
+}

@@ -1,5 +1,29 @@
 
+.mobile-only {
+	display: none;
+}
+
+@media only screen and (width <= 1209px) {
+
+	.nav .and-contact {
+		display: none;
+	}
+
+}
+
 @media (--only-small-screens) {
+
+	html {
+		background: #fff;
+	}
+
+	.mobile-hide {
+		display: none;
+	}
+
+	.mobile-only {
+		display: block;;
+	}
 
 	.page {
 		flex-direction: column;
@@ -10,9 +34,123 @@
 		width: 100%;
 	}
 
+	.sidebar-header {
+		order: 1;
+	}
+
+	.sidebar-content {
+		position: static;
+		margin: 1rem 0 2rem;
+	}
+
+	.sidebar-footer {
+		display: none;
+	}
+
+	.sidebar-title {
+		font-size: 32px;
+	}
+
+	.sidebar-title .word {
+		display: inline-block;
+	}
+
 	.main {
 		margin-left: 0;
 		padding: 0;
+	}
+
+	/**
+	 * Home Page
+	 */
+
+	.section-intro {
+		padding: 4rem 2rem 8rem;
+		height: auto;
+	}
+
+	.section-schedule {
+		padding-left: 10%;
+		width: 94%;
+	}
+
+	.session {
+		background-position: 2px 0;
+	}
+
+	.session-meta {
+		max-width: 50px;
+	}
+
+	.session-time {
+		margin-bottom: 1.75rem;
+		font-size: 14px;
+	}
+
+	.session-time-circle {
+		left: -3px;
+	}
+
+	.session--subsession .session-time-circle {
+		left: 0;
+	}
+
+	.session-meta .session-time-hhmm,
+	.session-meta .session-time-ampm {
+		display: none;
+	}
+
+	.session-content .session-time {
+		display: inline-block;
+		margin-bottom: 1.5rem;
+		line-height: 13px;
+	}
+
+	.session-interviewees {
+		flex-direction: column;
+	}
+
+	.interviewee + .interviewee {
+		margin-left: 0;
+		margin-top: 1rem;
+	}
+
+	.interviewee-image {
+		max-width: 48px;
+	}
+
+	.session-speaker-image {
+		left: -20px;
+		max-width: 48px;
+	}
+
+	.session--group .session-title {
+		font-size: 32px;
+	}
+
+	.session--misc .session-meta,
+	.session--podcast .session-meta,
+	.session--group .session-meta,
+	.session--lecture .session-meta {
+		padding-top: 0;
+	}
+
+	/**
+	 * About Page
+	 */
+
+	.page-about .main {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.page-about .column {
+		font-size: 24px;
+		text-align: left;
+	}
+
+	.page-about .contact {
+		align-items: flex-start;
 	}
 
 }

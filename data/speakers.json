@@ -22,7 +22,7 @@
 		"title": "Associate Professor of Global Christianity at Tyndale Seminary",
 		"biography": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"links": [
-			{ "label": "Tyndale", "url": "https://www.tyndale.ca/faculty/wafik-wahba" }
+			{ "label": "Faculty Profile", "url": "https://www.tyndale.ca/faculty/wafik-wahba" }
 		]
 	},
 	"mgoertz": {
@@ -34,18 +34,10 @@
 			{ "label": "Website", "url": "http://mariongoertz.com/" }
 		]
 	},
-	"bleunglai": {
-		"name": "Barbara Leung Lai",
-		"title": "Professor of Old Testament at Tyndale Seminary",
-		"biography": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-		"links": [
-			{ "label": "Tyndale", "url": "https://www.tyndale.ca/faculty/barbara-leung-lai" }
-		]
-	},
 	"awoolger": {
 		"name": "Anne Woolger",
-		"title": "Director of Matthew House refugee shelter",
-		"biography": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"title": "Director of Matthew House Refugee Shelter",
+		"biography": "Anne has been helping resettle refugees for more than 25 years, and started the Toronto-based Matthew House refugee centre in 1998 to help better accomplish this.",
 		"twitter": "matthew_house",
 		"links": [
 			{ "label": "Website", "url": "http://www.matthewhouse.ca/" }
@@ -53,8 +45,8 @@
 	},
 	"mgroleau": {
 		"name": "Mark Groleau",
-		"title": "Creator of WikiGod",
-		"biography": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"title": "Creator of the WikiGod podcast",
+		"biography": "Mark is an ordained minister and the person behind the Toronto-based WikiGod podcast, which engages with God-thinkers of many stripes to \"wiki\" God together as a community. He also loves Cantonese chow mein.",
 		"twitter": "markgroleau",
 		"links": [
 			{ "label": "Website", "url": "http://www.wikigodpod.com/" }
@@ -66,7 +58,7 @@
 		"biography": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"twitter": "markgroleau",
 		"links": [
-			{ "label": "Tyndale", "url": "https://www.tyndale.ca/faculty/terry-leblanc" }
+			{ "label": "Faculty Profile", "url": "https://www.tyndale.ca/faculty/terry-leblanc" }
 		]
 	},
 	"dkupp": {
@@ -80,13 +72,13 @@
 		"title": "Senior Academic Vice President at Tyndale Seminary",
 		"biography": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"links": [
-			{ "label": "Tyndale", "url": "https://www.tyndale.ca/faculty/janet-clark" }
+			{ "label": "Faculty Profile", "url": "https://www.tyndale.ca/faculty/janet-clark" }
 		]
 	},
 	"smosteller": {
 		"name": "Sue Mosteller",
 		"title": "Sister of St. Joseph",
-		"biography": "Toronto Author, Member of the Sisters of St. Joseph, Trustee of the Henri Nouwen Legacy, and former leader in the L'Arche and Daybreak Communities.",
+		"biography": "Sue is a Toronto-based author, and member of the Sisters of St. Joseph. She is also a trustee of the Henri Nouwen Legacy, and a former leader in the L'Arche and Daybreak Communities.",
 		"links": []
 	},
 	"bsider": {
@@ -97,12 +89,12 @@
 			{ "label": "Family Blog", "url": "http://www.siderfamily.blogspot.ca/" }
 		]
 	},
-	"jyee": {
-		"name": "Joanna Yee",
-		"title": "Director of Rahab Ministry",
+	"kjames": {
+		"name": "Katelyn James",
+		"title": "Manager of The Warming Room",
 		"biography": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"links": [
-			{ "label": "Website", "url": "http://www.careministries.ca/" }
+			{ "label": "The Warming Room", "url": "https://warmingroom.wordpress.com/" }
 		]
 	}
 }

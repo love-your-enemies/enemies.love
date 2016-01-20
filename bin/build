@@ -74,9 +74,6 @@ const site = metalsmith(__dirname)
 		partials: config.layouts,
 		directory: config.layouts
 	}))
-	.use(widows({
-		selectors: ['.session-title']
-	}))
 
 
 /**

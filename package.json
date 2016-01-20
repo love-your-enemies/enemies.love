@@ -15,7 +15,8 @@
     "domify": "^1.4.0",
     "domready": "^1.0.8",
     "page": "^1.6.4",
-    "payment": "0.0.12"
+    "payment": "0.0.12",
+    "scroll-to": "0.0.2"
   },
   "devDependencies": {
     "@rosszurowski/normalize": "^0.1.1",

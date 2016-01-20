@@ -2,15 +2,13 @@
 	{
 		"start": "2016-02-17T09:30:00.000Z",
 		"type": "misc",
-		"title": "Introduction",
-		"location": "Chapel"
+		"title": "Introduction"
 	},
 	{
 		"start": "2016-02-17T09:45:00.000Z",
 		"type": "lecture",
 		"title": "Befriending Enemies: Within and Without",
 		"description": "The worst enemy we face can be within.  Empowering this enemy restricts our capacities to serve and to love.  Likewise, our 'other' enemies interfere with our journey of becoming truly human.  The process of befriending enemies is impossible, tough, and potent, but contains the power/living water, to transform our journeys as true followers of Jesus.",
-		"location": "Chapel",
 		"speaker": "smosteller",
 		"subSessions": [
 			{
@@ -29,23 +27,27 @@
 	},
 	{
 		"start": "2016-02-17T10:40:00.000Z",
-		"title": "Enemies",
+		"title": "Love Your Enemies",
 		"type": "group",
-		"description": "We’ve arranged for speakers from around the GTA to come and share a bit about what it means to love our enemies in our present context.",
+		"description": "This round of breakout sessions will be focused on what it means to love some of the hardest people in our cities.",
 		"subSessions": [
 			{
 				"type": "workshop",
 				"title": "Understanding Current Dynamics in the World of Islam",
 				"description": "Current world events require deeper understanding of the world of Islam where religion, politics and economy are very much intertwined. A deeper understanding of Islamic religious beliefs will help us navigate the current complexities of  political and social upheavals. Issues like human rights and freedom will be explored from religious and historical perspectives. ",
-				"speaker": "wwahba",
-				"location": "Chapel"
+				"speaker": "wwahba"
 			},
 			{
 				"type": "workshop",
 				"title": "Loving Toronto's Sexual Predators",
-				"description": "Restorative justice and loving our sexual predators in our society. Excepteur sint occaecat cupidatat non proident.",
-				"speaker": "bsider",
-				"location": "Lower Commons"
+				"description": "TBA",
+				"speaker": "bsider"
+			},
+			{
+				"type": "workshop",
+				"description": "TBA",
+				"title": "TBA",
+				"speaker": "kjames"
 			}
 		]
 	},
@@ -59,7 +61,6 @@
 		"type": "lecture",
 		"title": "Our Tears are All the Same Colour",
 		"description": "It will examine Jesus command to love our enemies, pray for those who persecute us and to love our neighbour as ourselves. It will look at samples from scripture of radical hospitality as well as experiences at Matthew House (refugee ministry) Toronto and challenge people to overcome their fears and reach out and love the outsiders and strangers on our doorstep.",
-		"location": "Chapel",
 		"speaker": "awoolger"
 	},
 	{
@@ -74,7 +75,6 @@
 		"type": "podcast",
 		"title": "WikiGod Podcast Interview",
 		"description": "Mark Groleau from the [WikiGod](http://www.wikigodpod.com/) podcast will be conducting a group interview with Tyndale Professors [Terry LeBlanc](#!) and [David Kupp](#!) about the role of contemporary Christianity in reshaping the culture of Toronto.",
-		"location": "Chapel",
 		"speaker": "mgroleau",
 		"interviewees": [
 			"tleblanc",
@@ -89,44 +89,38 @@
 	{
 		"start": "2016-02-17T15:40:00.000Z",
 		"type": "group",
-		"title": "Neighbours",
-		"description": "Description about the second round of workshops. Maybe a common theme, or linking element.",
+		"title": "Love Your Neighbours",
+		"description": "This round of breakout sessions is going to be focused on practical ways we can show love in our contexts.",
 		"subSessions": [
 			{
 				"type": "workshop",
-				"title": "A Vision for the Formation of Seminary Students",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-				"speaker": "jclark",
-				"location": "Kimmerle Hall"
+				"title": "TBA",
+				"description": "",
+				"speaker": "jclark"
 			},
 			{
 				"type": "workshop",
 				"title": "Practical Spiritual Theology",
-				"description": "Practical spiritual theology for Christian Leaders to “love their enemies”",
-				"speaker": "smosteller",
-				"location": "Alumni Hall"
+				"description": "TBA",
+				"speaker": "smosteller"
 			},
 			{
 				"type": "workshop",
 				"title": "Radical Hospitality: Welcoming the Stranger ",
 				"description": "What are the theological stakes involved in welcoming the stranger? This workshop explores several dimensions of hospitality, drawing on insights from the bible, theology, philosophy, and lived experience.",
-				"speaker": "jmckinney",
-				"location": "Alumni Hall"
+				"speaker": "jmckinney"
 			}
 		]
 	},
 	{
 		"start": "2016-02-17T16:15:00.000Z",
 		"type": "misc",
-		"title": "Closing Remarks",
-		"location": "Chapel",
-		"last": true
+		"title": "Closing Remarks"
 	},
 	{
 		"start": "2016-02-17T19:00:00.000Z",
 		"type": "after",
 		"title": "After Party",
-		"location": "A Local Pub",
-		"description": "After you’ve had the chance to get some dinner, come grab a pint and wind-down at the after-party at a local pub."
+		"description": "Following the colloquium, we will be hosting an afterparty at [Puck and Wings](https://www.google.ca/maps/place/Puck+'N+Wings/@43.7809934,-79.4231927,14.86z/data=!4m2!3m1!1s0x882b2d0e0b45536b:0x234894619597ccfd), only a 12 minute drive from Tyndale. <span class=\"small\">The afterparty is not associated with Tyndale Seminary.</span>"
 	}
 ]
