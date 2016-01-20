@@ -14,4 +14,4 @@ So why a colloquium? Because we believe in the world changing potential of share
 
 We're excited to share this with you all.
 
-&mdash; [Ben Bartosik](http://twitter.com/benbartosik) and [Jesse James](https://www.facebook.com/jessedavidjames?fref=ts)
+&mdash; [Ben Bartosik](http://twitter.com/benbartosik) and [Jesse James](https://www.facebook.com/jessedavidjames?fref=ts), & the rest of the [Tyndale Seminary Student Association](http://twitter.com/tssa_toronto)
